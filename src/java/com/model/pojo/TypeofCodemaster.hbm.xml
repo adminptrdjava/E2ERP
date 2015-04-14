@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13 Apr, 2015 11:03:06 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.model.pojo.TypeofCodemaster" table="typeof_codemaster" catalog="e2rp" optimistic-lock="version">
+        <id name="tocmasId" type="java.lang.Integer">
+            <column name="TOCMAS_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="tocmasDescr" type="string">
+            <column name="TOCMAS_DESCR" length="50" not-null="true" />
+        </property>
+        <property name="tocmasTablename" type="string">
+            <column name="TOCMAS_TABLENAME" length="50" not-null="true" />
+        </property>
+        <property name="tocmasFieldname" type="string">
+            <column name="TOCMAS_FIELDNAME" length="50" not-null="true" />
+        </property>
+        <property name="tocmasTocfieldname" type="string">
+            <column name="TOCMAS_TOCFIELDNAME" length="50" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

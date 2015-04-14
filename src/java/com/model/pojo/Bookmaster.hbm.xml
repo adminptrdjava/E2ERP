@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13 Apr, 2015 11:03:06 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.model.pojo.Bookmaster" table="bookmaster" catalog="e2rp" optimistic-lock="version">
+        <id name="bookId" type="java.lang.Integer">
+            <column name="BOOK_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="bookSubId" type="int">
+            <column name="BOOK_SUB_ID" not-null="true" />
+        </property>
+        <property name="bookTitle" type="string">
+            <column name="BOOK_TITLE" length="100" not-null="true" />
+        </property>
+        <property name="bookAuthor" type="string">
+            <column name="BOOK_AUTHOR" length="50" not-null="true" />
+        </property>
+        <property name="bookPublisher" type="string">
+            <column name="BOOK_PUBLISHER" length="50" not-null="true" />
+        </property>
+        <property name="bookIsbn" type="string">
+            <column name="BOOK_ISBN" length="50" not-null="true" />
+        </property>
+        <property name="bookRackNo" type="string">
+            <column name="BOOK_RACK_NO" length="25" not-null="true" />
+        </property>
+        <property name="bookPrice" type="big_decimal">
+            <column name="BOOK_PRICE" precision="18" not-null="true" />
+        </property>
+        <property name="bookPurDate" type="timestamp">
+            <column name="BOOK_PUR_DATE" length="19" not-null="true" />
+        </property>
+        <property name="bookVolume" type="string">
+            <column name="BOOK_VOLUME" length="10" not-null="true" />
+        </property>
+        <property name="bookCreatedby" type="int">
+            <column name="BOOK_CREATEDBY" not-null="true" />
+        </property>
+        <property name="bookCreateddt" type="timestamp">
+            <column name="BOOK_CREATEDDT" length="19" not-null="true" />
+        </property>
+        <property name="bookIsactive" type="string">
+            <column name="BOOK_ISACTIVE" length="1" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

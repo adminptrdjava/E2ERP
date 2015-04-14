@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13 Apr, 2015 11:03:06 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.model.pojo.Itemdtl" table="itemdtl" catalog="e2rp" optimistic-lock="version">
+        <composite-id name="id" class="com.model.pojo.ItemdtlId">
+            <key-property name="itemDtlid" type="int">
+                <column name="ITEM_DTLID" />
+            </key-property>
+            <key-property name="itemId" type="int">
+                <column name="ITEM_ID" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="itemmaster" class="com.model.pojo.Itemmaster" update="false" insert="false" fetch="select">
+            <column name="ITEM_ID" not-null="true" />
+        </many-to-one>
+        <property name="itemPurrate" type="big_decimal">
+            <column name="ITEM_PURRATE" precision="18" />
+        </property>
+        <property name="itemPurrateuom" type="string">
+            <column name="ITEM_PURRATEUOM" length="10" not-null="true" />
+        </property>
+        <property name="itemSalerate" type="big_decimal">
+            <column name="ITEM_SALERATE" precision="18" />
+        </property>
+        <property name="itemSalerateuom" type="string">
+            <column name="ITEM_SALERATEUOM" length="10" not-null="true" />
+        </property>
+        <property name="itemFromdt" type="timestamp">
+            <column name="ITEM_FROMDT" length="19" not-null="true" />
+        </property>
+        <property name="itemTodt" type="timestamp">
+            <column name="ITEM_TODT" length="19" />
+        </property>
+    </class>
+</hibernate-mapping>

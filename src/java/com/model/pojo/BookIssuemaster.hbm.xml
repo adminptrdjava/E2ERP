@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13 Apr, 2015 11:03:06 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.model.pojo.BookIssuemaster" table="book_issuemaster" catalog="e2rp" optimistic-lock="version">
+        <id name="issueId" type="java.lang.Integer">
+            <column name="ISSUE_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="bookId" type="int">
+            <column name="BOOK_ID" not-null="true" />
+        </property>
+        <property name="memberId" type="int">
+            <column name="MEMBER_ID" not-null="true" />
+        </property>
+        <property name="issueDate" type="timestamp">
+            <column name="ISSUE_DATE" length="19" not-null="true" />
+        </property>
+        <property name="dueDate" type="timestamp">
+            <column name="DUE_DATE" length="19" not-null="true" />
+        </property>
+        <property name="isIssued" type="string">
+            <column name="IS_ISSUED" length="20" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

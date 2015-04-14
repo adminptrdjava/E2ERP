@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13 Apr, 2015 11:03:06 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.model.pojo.RequsitionApproval" table="requsition_approval" catalog="e2rp" optimistic-lock="version">
+        <id name="reqAppId" type="java.lang.Integer">
+            <column name="REQ_APP_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="requToId" type="string">
+            <column name="REQU_TO_ID" length="20" not-null="true" />
+        </property>
+        <property name="requFromId" type="string">
+            <column name="REQU_FROM_ID" length="100" not-null="true" />
+        </property>
+        <property name="frwdReqId" type="int">
+            <column name="FRWD_REQ_ID" not-null="true" />
+        </property>
+        <property name="appPrsnEmpId" type="string">
+            <column name="APP_PRSN_EMP_ID" length="20" not-null="true" />
+        </property>
+        <property name="reqAppCreatedby" type="int">
+            <column name="REQ_APP_CREATEDBY" not-null="true" />
+        </property>
+        <property name="reqAppCreateddt" type="timestamp">
+            <column name="REQ_APP_CREATEDDT" length="19" not-null="true" />
+        </property>
+        <property name="orderStatus" type="string">
+            <column name="ORDER_STATUS" length="50" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

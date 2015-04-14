@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13 Apr, 2015 11:03:06 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.model.pojo.RoutineDetails" table="routine_details" catalog="e2rp" optimistic-lock="version">
+        <id name="rdId" type="java.lang.Integer">
+            <column name="RD_ID" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="routineMaster" class="com.model.pojo.RoutineMaster" fetch="select">
+            <column name="RM_ID" not-null="true" />
+        </many-to-one>
+        <property name="day" type="string">
+            <column name="DAY" length="20" not-null="true" />
+        </property>
+        <property name="period" type="string">
+            <column name="PERIOD" length="20" not-null="true" />
+        </property>
+        <property name="subjectId" type="int">
+            <column name="SUBJECT_ID" not-null="true" />
+        </property>
+        <property name="teacherId" type="int">
+            <column name="TEACHER_ID" not-null="true" />
+        </property>
+        <property name="createdBy" type="int">
+            <column name="CREATED_BY" not-null="true" />
+        </property>
+        <property name="createdOn" type="timestamp">
+            <column name="CREATED_ON" length="19" not-null="true" />
+        </property>
+        <property name="rdIsactive" type="string">
+            <column name="RD_ISACTIVE" length="10" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

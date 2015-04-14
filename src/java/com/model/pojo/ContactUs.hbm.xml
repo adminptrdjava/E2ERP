@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13 Apr, 2015 11:03:06 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.model.pojo.ContactUs" table="contact_us" catalog="e2rp" optimistic-lock="version">
+        <id name="serialId" type="java.lang.Integer">
+            <column name="SERIAL_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="contactName" type="string">
+            <column name="CONTACT_NAME" length="50" not-null="true" />
+        </property>
+        <property name="contactEmail" type="string">
+            <column name="CONTACT_EMAIL" length="50" />
+        </property>
+        <property name="contactPhone" type="string">
+            <column name="CONTACT_PHONE" length="50" />
+        </property>
+        <property name="contactMessege" type="string">
+            <column name="CONTACT_MESSEGE" length="50" />
+        </property>
+        <property name="createdOn" type="string">
+            <column name="CREATED_ON" length="50" not-null="true" />
+        </property>
+        <property name="contactUsIsactive" type="string">
+            <column name="CONTACT_US_ISACTIVE" length="50" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

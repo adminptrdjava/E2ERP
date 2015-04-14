@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13 Apr, 2015 11:03:06 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.model.pojo.ClassMaster" table="class_master" catalog="e2rp" optimistic-lock="version">
+        <id name="classId" type="java.lang.Integer">
+            <column name="CLASS_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="className" type="string">
+            <column name="CLASS_NAME" length="10" not-null="true" />
+        </property>
+        <property name="classIsactive" type="string">
+            <column name="CLASS_ISACTIVE" length="10" not-null="true" />
+        </property>
+        
+    </class>
+</hibernate-mapping>

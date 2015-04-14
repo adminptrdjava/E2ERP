@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13 Apr, 2015 11:03:06 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.model.pojo.Productstockledger" table="productstockledger" catalog="e2rp" optimistic-lock="version">
+        <composite-id name="id" class="com.model.pojo.ProductstockledgerId">
+            <key-property name="stkId" type="int">
+                <column name="STK_ID" />
+            </key-property>
+            <key-property name="stkProdid" type="int">
+                <column name="STK_PRODID" />
+            </key-property>
+        </composite-id>
+        <property name="stkDate" type="timestamp">
+            <column name="STK_DATE" length="19" not-null="true" />
+        </property>
+        <property name="stkPurId" type="int">
+            <column name="STK_PUR_ID" not-null="true" />
+        </property>
+        <property name="stkOpenstock" type="big_decimal">
+            <column name="STK_OPENSTOCK" precision="18" not-null="true" />
+        </property>
+        <property name="stkPurcstock" type="big_decimal">
+            <column name="STK_PURCSTOCK" precision="18" not-null="true" />
+        </property>
+        <property name="stkSalestock" type="big_decimal">
+            <column name="STK_SALESTOCK" precision="18" not-null="true" />
+        </property>
+        <property name="stkFloorstock" type="big_decimal">
+            <column name="STK_FLOORSTOCK" precision="18" not-null="true" />
+        </property>
+        <property name="stkTransitstock" type="big_decimal">
+            <column name="STK_TRANSITSTOCK" precision="18" not-null="true" />
+        </property>
+        <property name="stkClosingstock" type="big_decimal">
+            <column name="STK_CLOSINGSTOCK" precision="18" not-null="true" />
+        </property>
+        <property name="stkType" type="string">
+            <column name="STK_TYPE" length="20" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

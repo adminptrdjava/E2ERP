@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13 Apr, 2015 11:03:06 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.model.pojo.Typeofcode" table="typeofcode" catalog="e2rp" optimistic-lock="version">
+        <id name="tocId" type="java.lang.Integer">
+            <column name="TOC_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="tocPrefix" type="string">
+            <column name="TOC_PREFIX" length="8" not-null="true" />
+        </property>
+        <property name="tocDescr" type="string">
+            <column name="TOC_DESCR" length="50" not-null="true" />
+        </property>
+        <property name="tocSeparator" type="string">
+            <column name="TOC_SEPARATOR" length="1" not-null="true" />
+        </property>
+        <property name="tocSuffixlen" type="int">
+            <column name="TOC_SUFFIXLEN" not-null="true" />
+        </property>
+        <property name="tocTocmasid" type="int">
+            <column name="TOC_TOCMASID" not-null="true" />
+        </property>
+        <property name="tocIseditable" type="string">
+            <column name="TOC_ISEDITABLE" length="8" not-null="true" />
+        </property>
+        <property name="tocIsauto" type="string">
+            <column name="TOC_ISAUTO" length="8" not-null="true" />
+        </property>
+        <property name="tocIsdiscont" type="string">
+            <column name="TOC_ISDISCONT" length="8" not-null="true" />
+        </property>
+        <property name="tocCreationdt" type="timestamp">
+            <column name="TOC_CREATIONDT" length="19" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

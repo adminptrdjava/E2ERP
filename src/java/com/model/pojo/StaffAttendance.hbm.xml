@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13 Apr, 2015 11:03:06 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.model.pojo.StaffAttendance" table="staff_attendance" catalog="e2rp" optimistic-lock="version">
+        <id name="attenId" type="java.lang.Integer">
+            <column name="ATTEN_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="staffId" type="int">
+            <column name="STAFF_ID" not-null="true" />
+        </property>
+        <property name="attenDate" type="timestamp">
+            <column name="ATTEN_DATE" length="19" not-null="true" />
+        </property>
+        <property name="attendancestatus" type="int">
+            <column name="ATTENDANCESTATUS" not-null="true" />
+        </property>
+        <property name="leaveStatuts" type="int">
+            <column name="LEAVE_STATUTS" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

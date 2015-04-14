@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13 Apr, 2015 11:03:06 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.model.pojo.RequsitionForward" table="requsition_forward" catalog="e2rp" optimistic-lock="version">
+        <id name="reqForwardId" type="java.lang.Integer">
+            <column name="REQ_FORWARD_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="reqHistoryId" type="int">
+            <column name="REQ_HISTORY_ID" not-null="true" />
+        </property>
+        <property name="reqFromId" type="string">
+            <column name="REQ_FROM_ID" length="100" not-null="true" />
+        </property>
+        <property name="reqToIds" type="string">
+            <column name="REQ_TO_IDS" not-null="true" />
+        </property>
+        <property name="reqType" type="string">
+            <column name="REQ_TYPE" length="50" not-null="true" />
+        </property>
+        <property name="reqStatus" type="string">
+            <column name="REQ_STATUS" length="50" not-null="true" />
+        </property>
+        <property name="flag1" type="int">
+            <column name="FLAG1" not-null="true" />
+        </property>
+        <property name="flag2" type="string">
+            <column name="FLAG2" length="50" not-null="true" />
+        </property>
+        <property name="createdBy" type="int">
+            <column name="CREATED_BY" not-null="true" />
+        </property>
+        <property name="createdOn" type="timestamp">
+            <column name="CREATED_ON" length="19" not-null="true" />
+        </property>
+        <property name="editedBy" type="int">
+            <column name="EDITED_BY" not-null="true" />
+        </property>
+        <property name="editedOn" type="timestamp">
+            <column name="EDITED_ON" length="19" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

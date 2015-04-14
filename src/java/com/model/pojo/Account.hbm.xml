@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13 Apr, 2015 11:03:06 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.model.pojo.Account" table="account" catalog="e2rp" optimistic-lock="version">
+        <id name="accId" type="java.lang.Integer">
+            <column name="ACC_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="accCOrSCode" type="string">
+            <column name="ACC_C_OR_S_CODE" length="50" not-null="true" />
+        </property>
+        <property name="accType" type="string">
+            <column name="ACC_TYPE" length="50" not-null="true" />
+        </property>
+        <property name="accDueamount" type="big_decimal">
+            <column name="ACC_DUEAMOUNT" precision="18" not-null="true" />
+        </property>
+        <property name="accChequeno" type="string">
+            <column name="ACC_CHEQUENO" length="15" />
+        </property>
+        <property name="accChequedt" type="timestamp">
+            <column name="ACC_CHEQUEDT" length="19" />
+        </property>
+        <property name="accPaidamot" type="big_decimal">
+            <column name="ACC_PAIDAMOT" precision="18" not-null="true" />
+        </property>
+        <property name="accPaymenttype" type="string">
+            <column name="ACC_PAYMENTTYPE" length="10" />
+        </property>
+        <property name="accOtherinfo" type="string">
+            <column name="ACC_OTHERINFO" length="600" />
+        </property>
+        <property name="accDate" type="timestamp">
+            <column name="ACC_DATE" length="19" not-null="true" />
+        </property>
+        <set name="accmasterdetails" table="accmasterdetail" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="ACC_ID" not-null="true" />
+            </key>
+            <one-to-many class="com.model.pojo.Accmasterdetail" />
+        </set>
+    </class>
+</hibernate-mapping>

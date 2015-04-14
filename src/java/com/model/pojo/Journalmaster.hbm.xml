@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13 Apr, 2015 11:03:06 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.model.pojo.Journalmaster" table="journalmaster" catalog="e2rp" optimistic-lock="version">
+        <id name="jouId" type="java.lang.Integer">
+            <column name="JOU_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="jouCodeid" type="int">
+            <column name="JOU_CODEID" not-null="true" />
+        </property>
+        <property name="jouCode" type="string">
+            <column name="JOU_CODE" length="20" not-null="true" />
+        </property>
+        <property name="jouTocid" type="int">
+            <column name="JOU_TOCID" not-null="true" />
+        </property>
+        <property name="jouVoudate" type="timestamp">
+            <column name="JOU_VOUDATE" length="19" not-null="true" />
+        </property>
+        <property name="jouNarration" type="string">
+            <column name="JOU_NARRATION" not-null="true" />
+        </property>
+        <property name="jouType" type="string">
+            <column name="JOU_TYPE" length="50" not-null="true" />
+        </property>
+        <property name="jouChqno" type="java.lang.Integer">
+            <column name="JOU_CHQNO" />
+        </property>
+        <property name="jouChqdate" type="string">
+            <column name="JOU_CHQDATE" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>

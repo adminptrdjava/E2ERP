@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13 Apr, 2015 11:03:06 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.model.pojo.LeaveMaster" table="leave_master" catalog="e2rp" optimistic-lock="version">
+        <id name="leaveId" type="java.lang.Integer">
+            <column name="LEAVE_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="employeeId" type="int">
+            <column name="EMPLOYEE_ID" not-null="true" />
+        </property>
+        <property name="degsignationId" type="int">
+            <column name="DEGSIGNATION_ID" not-null="true" />
+        </property>
+        <property name="paidleave" type="string">
+            <column name="PAIDLEAVE" length="50" not-null="true" />
+        </property>
+        <property name="unpaidleave" type="string">
+            <column name="UNPAIDLEAVE" length="50" not-null="true" />
+        </property>
+        <property name="noofleave" type="string">
+            <column name="NOOFLEAVE" length="50" not-null="true" />
+        </property>
+        <property name="flag1" type="int">
+            <column name="FLAG_1" not-null="true" />
+        </property>
+        <property name="flag2" type="string">
+            <column name="FLAG_2" length="50" not-null="true" />
+        </property>
+        <property name="flag3" type="string">
+            <column name="FLAG_3" length="50" not-null="true" />
+        </property>
+        <property name="flag4" type="string">
+            <column name="FLAG_4" length="50" not-null="true" />
+        </property>
+        <property name="flag5" type="string">
+            <column name="FLAG_5" length="50" not-null="true" />
+        </property>
+        <property name="leaveIsactive" type="string">
+            <column name="LEAVE_ISACTIVE" length="10" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

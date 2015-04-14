@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13 Apr, 2015 11:03:06 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.model.pojo.StaffRegistration" table="staff_registration" catalog="e2rp" optimistic-lock="version">
+        <id name="slid" type="java.lang.Integer">
+            <column name="SLID" />
+            <generator class="identity" />
+        </id>
+        <property name="regid" type="string">
+            <column name="REGID" length="50" not-null="true" />
+        </property>
+        <property name="staffname" type="string">
+            <column name="STAFFNAME" length="50" not-null="true" />
+        </property>
+        <property name="dob" type="timestamp">
+            <column name="DOB" length="19" not-null="true" />
+        </property>
+        <property name="age" type="int">
+            <column name="AGE" not-null="true" />
+        </property>
+        <property name="gender" type="string">
+            <column name="GENDER" length="10" not-null="true" />
+        </property>
+        <property name="fathersname" type="string">
+            <column name="FATHERSNAME" length="50" not-null="true" />
+        </property>
+        <property name="mothersname" type="string">
+            <column name="MOTHERSNAME" length="50" not-null="true" />
+        </property>
+        <property name="email" type="string">
+            <column name="EMAIL" length="50" not-null="true" />
+        </property>
+        <property name="mobileno" type="string">
+            <column name="MOBILENO" length="15" not-null="true" />
+        </property>
+        <property name="skill" type="string">
+            <column name="SKILL" length="250" not-null="true" />
+        </property>
+        <property name="graduationmarks" type="long">
+            <column name="GRADUATIONMARKS" precision="18" scale="0" not-null="true" />
+        </property>
+        <property name="qualification" type="string">
+            <column name="QUALIFICATION" length="250" not-null="true" />
+        </property>
+        <property name="currentemployment" type="string">
+            <column name="CURRENTEMPLOYMENT" length="20" not-null="true" />
+        </property>
+        <property name="experience" type="string">
+            <column name="EXPERIENCE" length="20" not-null="true" />
+        </property>
+        <property name="address" type="string">
+            <column name="ADDRESS" length="250" not-null="true" />
+        </property>
+        <property name="city" type="string">
+            <column name="CITY" length="30" not-null="true" />
+        </property>
+        <property name="state" type="string">
+            <column name="STATE" length="30" not-null="true" />
+        </property>
+        <property name="pincode" type="int">
+            <column name="PINCODE" not-null="true" />
+        </property>
+        <property name="medicalhistory" type="string">
+            <column name="MEDICALHISTORY" length="30" not-null="true" />
+        </property>
+        <property name="document" type="string">
+            <column name="DOCUMENT" length="30" not-null="true" />
+        </property>
+        <property name="photo" type="string">
+            <column name="PHOTO" length="30" not-null="true" />
+        </property>
+        <property name="flag3" type="string">
+            <column name="FLAG_3" length="30" not-null="true" />
+        </property>
+        <property name="flag4" type="string">
+            <column name="FLAG_4" length="30" not-null="true" />
+        </property>
+        <property name="flag5" type="string">
+            <column name="FLAG_5" length="30" not-null="true" />
+        </property>
+        <property name="enqIsactive" type="string">
+            <column name="ENQ_ISACTIVE" length="30" not-null="true" />
+        </property>
+        <property name="designation" type="string">
+            <column name="DESIGNATION" length="50" />
+        </property>
+        <property name="column30" type="java.lang.Integer">
+            <column name="Column_30" />
+        </property>
+        <property name="column31" type="java.lang.Integer">
+            <column name="Column_31" />
+        </property>
+    </class>
+</hibernate-mapping>

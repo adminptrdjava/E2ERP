@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13 Apr, 2015 11:03:06 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.model.pojo.StudentDetails" table="student_details" catalog="e2rp" optimistic-lock="version">
+        <id name="seriId" type="java.lang.Integer">
+            <column name="SERI_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="studentSlId" type="int">
+            <column name="STUDENT_SL_ID" not-null="true" />
+        </property>
+        <property name="class_" type="string">
+            <column name="CLASS" length="30" not-null="true" />
+        </property>
+        <property name="section" type="string">
+            <column name="SECTION" length="10" not-null="true" />
+        </property>
+        <property name="stream" type="string">
+            <column name="STREAM" length="30" not-null="true" />
+        </property>
+        <property name="roll" type="string">
+            <column name="ROLL" length="30" not-null="true" />
+        </property>
+        <property name="academicyear" type="int">
+            <column name="ACADEMICYEAR" not-null="true" />
+        </property>
+        <property name="flag1" type="string">
+            <column name="FLAG_1" length="30" not-null="true" />
+        </property>
+        <property name="flag2" type="string">
+            <column name="FLAG_2" length="30" not-null="true" />
+        </property>
+        <property name="flag3" type="string">
+            <column name="FLAG_3" length="30" not-null="true" />
+        </property>
+        <property name="flag4" type="string">
+            <column name="FLAG_4" length="30" not-null="true" />
+        </property>
+        <property name="flag5" type="string">
+            <column name="FLAG_5" length="30" not-null="true" />
+        </property>
+        <property name="studentIsactive" type="string">
+            <column name="STUDENT_ISACTIVE" length="30" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

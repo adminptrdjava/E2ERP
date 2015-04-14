@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13 Apr, 2015 11:03:06 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.model.pojo.StudentFeesDetails" table="student_fees_details" catalog="e2rp" optimistic-lock="version">
+        <id name="studentFeesDetailsid" type="java.lang.Integer">
+            <column name="STUDENT_FEES_DETAILSID" />
+            <generator class="identity" />
+        </id>
+        <property name="studentId" type="int">
+            <column name="STUDENT_ID" not-null="true" />
+        </property>
+        <property name="paymentMode" type="string">
+            <column name="PAYMENT_MODE" length="10" not-null="true" />
+        </property>
+        <property name="paymentAmount" type="big_decimal">
+            <column name="PAYMENT_AMOUNT" precision="18" not-null="true" />
+        </property>
+        <property name="dueDate" type="string">
+            <column name="DUE_DATE" length="10" not-null="true" />
+        </property>
+        <property name="paymentOption" type="int">
+            <column name="PAYMENT_OPTION" not-null="true" />
+        </property>
+        <property name="chequeNo" type="string">
+            <column name="CHEQUE_NO" length="10" />
+        </property>
+        <property name="chequeDate" type="string">
+            <column name="CHEQUE_DATE" length="10" />
+        </property>
+        <property name="dueAmount" type="big_decimal">
+            <column name="DUE_AMOUNT" precision="18" />
+        </property>
+        <property name="createdBy" type="java.lang.Integer">
+            <column name="CREATED_BY" />
+        </property>
+        <property name="createdOn" type="timestamp">
+            <column name="CREATED_ON" length="19" not-null="true" />
+        </property>
+        <property name="feesIsactive" type="string">
+            <column name="FEES_ISACTIVE" length="10" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

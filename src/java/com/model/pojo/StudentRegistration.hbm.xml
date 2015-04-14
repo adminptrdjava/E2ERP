@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13 Apr, 2015 11:03:06 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.model.pojo.StudentRegistration" table="student_registration" catalog="e2rp" optimistic-lock="version">
+        <id name="regid" type="string">
+            <column name="REGID" length="30" />
+            <generator class="assigned" />
+        </id>
+        <property name="slid" type="int">
+            <column name="SLID" not-null="true" />
+        </property>
+        <property name="enqid" type="string">
+            <column name="ENQID" length="30" not-null="true" />
+        </property>
+        <property name="bloodgroup" type="string">
+            <column name="BLOODGROUP" length="10" not-null="true" />
+        </property>
+        <property name="physicallychallnged" type="string">
+            <column name="PHYSICALLYCHALLNGED" length="30" not-null="true" />
+        </property>
+        <property name="challengetype" type="string">
+            <column name="CHALLENGETYPE" length="30" not-null="true" />
+        </property>
+        <property name="nationality" type="string">
+            <column name="NATIONALITY" length="30" not-null="true" />
+        </property>
+        <property name="region" type="string">
+            <column name="REGION" length="30" not-null="true" />
+        </property>
+        <property name="remark" type="string">
+            <column name="REMARK" length="30" not-null="true" />
+        </property>
+        <property name="picture" type="int">
+            <column name="PICTURE" not-null="true" />
+        </property>
+        <property name="regdate" type="timestamp">
+            <column name="REGDATE" length="19" not-null="true" />
+        </property>
+        <property name="admissionstatus" type="string">
+            <column name="ADMISSIONSTATUS" length="30" not-null="true" />
+        </property>
+        <property name="flag1" type="string">
+            <column name="FLAG_1" length="30" not-null="true" />
+        </property>
+        <property name="flag2" type="string">
+            <column name="FLAG_2" length="30" not-null="true" />
+        </property>
+        <property name="flag3" type="string">
+            <column name="FLAG_3" length="30" not-null="true" />
+        </property>
+        <property name="flag4" type="string">
+            <column name="FLAG_4" length="30" not-null="true" />
+        </property>
+        <property name="flag5" type="string">
+            <column name="FLAG_5" length="30" not-null="true" />
+        </property>
+        <property name="enqIsactive" type="string">
+            <column name="ENQ_ISACTIVE" length="30" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

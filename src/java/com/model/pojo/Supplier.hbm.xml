@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13 Apr, 2015 11:03:06 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.model.pojo.Supplier" table="supplier" catalog="e2rp" optimistic-lock="version">
+        <id name="suppId" type="java.lang.Integer">
+            <column name="SUPP_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="suppCode" type="string">
+            <column name="SUPP_CODE" length="20" not-null="true" />
+        </property>
+        <property name="suppName" type="string">
+            <column name="SUPP_NAME" length="100" not-null="true" />
+        </property>
+        <property name="suppAddress" type="string">
+            <column name="SUPP_ADDRESS" not-null="true" />
+        </property>
+        <property name="suppPhone" type="string">
+            <column name="SUPP_PHONE" length="50" not-null="true" />
+        </property>
+        <property name="suppType" type="string">
+            <column name="SUPP_TYPE" length="50" not-null="true" />
+        </property>
+        <property name="suppCreatedby" type="int">
+            <column name="SUPP_CREATEDBY" not-null="true" />
+        </property>
+        <property name="suppCreateddt" type="timestamp">
+            <column name="SUPP_CREATEDDT" length="19" not-null="true" />
+        </property>
+        <property name="suppIsactive" type="string">
+            <column name="SUPP_ISACTIVE" length="1" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

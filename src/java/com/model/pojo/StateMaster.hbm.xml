@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13 Apr, 2015 11:03:06 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.model.pojo.StateMaster" table="state_master" catalog="e2rp" optimistic-lock="version">
+        <id name="stateId" type="java.lang.Integer">
+            <column name="STATE_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="stateName" type="string">
+            <column name="STATE_NAME" length="50" not-null="true" />
+        </property>
+        <property name="countryCode" type="string">
+            <column name="COUNTRY_CODE" length="50" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

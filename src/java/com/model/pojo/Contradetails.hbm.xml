@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13 Apr, 2015 11:03:06 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.model.pojo.Contradetails" table="contradetails" catalog="e2rp" optimistic-lock="version">
+        <composite-id name="id" class="com.model.pojo.ContradetailsId">
+            <key-property name="conDtlid" type="int">
+                <column name="CON_DTLID" />
+            </key-property>
+            <key-property name="conId" type="int">
+                <column name="CON_ID" />
+            </key-property>
+        </composite-id>
+        <property name="conByorto" type="string">
+            <column name="CON_BYORTO" length="20" not-null="true" />
+        </property>
+        <property name="conNature" type="string">
+            <column name="CON_NATURE" length="50" not-null="true" />
+        </property>
+        <property name="conParticulars" type="string">
+            <column name="CON_PARTICULARS" length="50" not-null="true" />
+        </property>
+        <property name="conAccId" type="int">
+            <column name="CON_ACC_ID" not-null="true" />
+        </property>
+        <property name="conDramount" type="big_decimal">
+            <column name="CON_DRAMOUNT" precision="18" />
+        </property>
+        <property name="conCramount" type="big_decimal">
+            <column name="CON_CRAMOUNT" precision="18" />
+        </property>
+    </class>
+</hibernate-mapping>

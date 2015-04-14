@@ -1,0 +1,186 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13 Apr, 2015 11:03:06 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.model.pojo.Studentmaster" table="studentmaster" catalog="e2rp" optimistic-lock="version">
+        <id name="stuSeriId" type="java.lang.Integer">
+            <column name="STU_SERI_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="stuAdmissionno" type="string">
+            <column name="STU_ADMISSIONNO" length="50" not-null="true" />
+        </property>
+        <property name="stuStudentid" type="string">
+            <column name="STU_STUDENTID" length="50" not-null="true" />
+        </property>
+        <property name="stuRegistrationid" type="string">
+            <column name="STU_REGISTRATIONID" length="50" not-null="true" />
+        </property>
+        <property name="stuAdmissiondate" type="timestamp">
+            <column name="STU_ADMISSIONDATE" length="19" not-null="true" />
+        </property>
+        <property name="stuAdmissionstatus" type="int">
+            <column name="STU_ADMISSIONSTATUS" not-null="true" />
+        </property>
+        <property name="stuStudentname" type="string">
+            <column name="STU_STUDENTNAME" length="50" not-null="true" />
+        </property>
+        <property name="stuDob" type="timestamp">
+            <column name="STU_DOB" length="19" not-null="true" />
+        </property>
+        <property name="stuGender" type="string">
+            <column name="STU_GENDER" length="50" not-null="true" />
+        </property>
+        <property name="stuAge" type="int">
+            <column name="STU_AGE" not-null="true" />
+        </property>
+        <property name="stuBloodgroup" type="string">
+            <column name="STU_BLOODGROUP" length="50" not-null="true" />
+        </property>
+        <property name="stuPreviousmarks" type="big_decimal">
+            <column name="STU_PREVIOUSMARKS" precision="18" not-null="true" />
+        </property>
+        <property name="stuAddressline" type="string">
+            <column name="STU_ADDRESSLINE" length="250" not-null="true" />
+        </property>
+        <property name="stuState" type="string">
+            <column name="STU_STATE" length="50" not-null="true" />
+        </property>
+        <property name="stuCity" type="string">
+            <column name="STU_CITY" length="50" not-null="true" />
+        </property>
+        <property name="stuPincode" type="int">
+            <column name="STU_PINCODE" not-null="true" />
+        </property>
+        <property name="stuNoofsiblings" type="int">
+            <column name="STU_NOOFSIBLINGS" not-null="true" />
+        </property>
+        <property name="stuNatinality" type="string">
+            <column name="STU_NATINALITY" length="50" not-null="true" />
+        </property>
+        <property name="stuReligion" type="string">
+            <column name="STU_RELIGION" length="50" not-null="true" />
+        </property>
+        <property name="stuPicture" type="int">
+            <column name="STU_PICTURE" not-null="true" />
+        </property>
+        <property name="stuPhysicallychallenged" type="string">
+            <column name="STU_PHYSICALLYCHALLENGED" length="10" not-null="true" />
+        </property>
+        <property name="stuChallengetype" type="string">
+            <column name="STU_CHALLENGETYPE" length="50" not-null="true" />
+        </property>
+        <property name="stuFathername" type="string">
+            <column name="STU_FATHERNAME" length="50" not-null="true" />
+        </property>
+        <property name="stuFathermobile" type="string">
+            <column name="STU_FATHERMOBILE" length="50" not-null="true" />
+        </property>
+        <property name="stuFatheroccupation" type="string">
+            <column name="STU_FATHEROCCUPATION" length="50" not-null="true" />
+        </property>
+        <property name="stuFatherqualification" type="string">
+            <column name="STU_FATHERQUALIFICATION" length="50" not-null="true" />
+        </property>
+        <property name="stuFatheremail" type="string">
+            <column name="STU_FATHEREMAIL" length="50" not-null="true" />
+        </property>
+        <property name="stuMothername" type="string">
+            <column name="STU_MOTHERNAME" length="50" not-null="true" />
+        </property>
+        <property name="stuMothermobile" type="string">
+            <column name="STU_MOTHERMOBILE" length="50" not-null="true" />
+        </property>
+        <property name="stuMotheroccupation" type="string">
+            <column name="STU_MOTHEROCCUPATION" length="50" not-null="true" />
+        </property>
+        <property name="stuMotherqualification" type="string">
+            <column name="STU_MOTHERQUALIFICATION" length="50" not-null="true" />
+        </property>
+        <property name="stuMotheremail" type="string">
+            <column name="STU_MOTHEREMAIL" length="50" not-null="true" />
+        </property>
+        <property name="stuFamilyincome" type="big_decimal">
+            <column name="STU_FAMILYINCOME" precision="18" not-null="true" />
+        </property>
+        <property name="stuMarriagedate" type="timestamp">
+            <column name="STU_MARRIAGEDATE" length="19" not-null="true" />
+        </property>
+        <property name="stuGuardianname" type="string">
+            <column name="STU_GUARDIANNAME" length="50" not-null="true" />
+        </property>
+        <property name="stuGurdianoccupation" type="string">
+            <column name="STU_GURDIANOCCUPATION" length="50" not-null="true" />
+        </property>
+        <property name="stuRelatiowithstudent" type="string">
+            <column name="STU_RELATIOWITHSTUDENT" length="50" not-null="true" />
+        </property>
+        <property name="stuGuardianmobile" type="string">
+            <column name="STU_GUARDIANMOBILE" length="50" not-null="true" />
+        </property>
+        <property name="stuGuardianemail" type="string">
+            <column name="STU_GUARDIANEMAIL" length="50" not-null="true" />
+        </property>
+        <property name="stuSchoolname" type="string">
+            <column name="STU_SCHOOLNAME" length="50" not-null="true" />
+        </property>
+        <property name="stuSchooladdress" type="string">
+            <column name="STU_SCHOOLADDRESS" length="250" not-null="true" />
+        </property>
+        <property name="stuSchoolphone" type="string">
+            <column name="STU_SCHOOLPHONE" length="50" not-null="true" />
+        </property>
+        <property name="stuSchoolwebsite" type="string">
+            <column name="STU_SCHOOLWEBSITE" length="50" not-null="true" />
+        </property>
+        <property name="stuSchoolemail" type="string">
+            <column name="STU_SCHOOLEMAIL" length="50" not-null="true" />
+        </property>
+        <property name="stuAdmissionyear" type="int">
+            <column name="STU_ADMISSIONYEAR" not-null="true" />
+        </property>
+        <property name="stuIdentificationmark" type="string">
+            <column name="STU_IDENTIFICATIONMARK" length="50" not-null="true" />
+        </property>
+        <property name="stuRationcard" type="string">
+            <column name="STU_RATIONCARD" length="50" not-null="true" />
+        </property>
+        <property name="stuBirthcertificate" type="string">
+            <column name="STU_BIRTHCERTIFICATE" length="50" not-null="true" />
+        </property>
+        <property name="stuDisease" type="string">
+            <column name="STU_DISEASE" length="50" not-null="true" />
+        </property>
+        <property name="stuCurrentstatus" type="int">
+            <column name="STU_CURRENTSTATUS" not-null="true" />
+        </property>
+        <property name="stuFlag2" type="int">
+            <column name="STU_FLAG_2" not-null="true" />
+        </property>
+        <property name="stuFlag3" type="string">
+            <column name="STU_FLAG_3" length="50" not-null="true" />
+        </property>
+        <property name="stuFlag4" type="string">
+            <column name="STU_FLAG_4" length="50" not-null="true" />
+        </property>
+        <property name="stuFlag5" type="string">
+            <column name="STU_FLAG_5" length="50" not-null="true" />
+        </property>
+        <property name="stuCreatedby" type="int">
+            <column name="STU_CREATEDBY" not-null="true" />
+        </property>
+        <property name="stuCreatedon" type="timestamp">
+            <column name="STU_CREATEDON" length="19" not-null="true" />
+        </property>
+        <property name="stuEditedby" type="int">
+            <column name="STU_EDITEDBY" not-null="true" />
+        </property>
+        <property name="stuEditedon" type="timestamp">
+            <column name="STU_EDITEDON" length="19" not-null="true" />
+        </property>
+        <property name="stuIsactive" type="string">
+            <column name="STU_ISACTIVE" length="30" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

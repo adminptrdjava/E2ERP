@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13 Apr, 2015 11:03:06 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.model.pojo.Receiptdetails" table="receiptdetails" catalog="e2rp" optimistic-lock="version">
+        <composite-id name="id" class="com.model.pojo.ReceiptdetailsId">
+            <key-property name="recDtlid" type="int">
+                <column name="REC_DTLID" />
+            </key-property>
+            <key-property name="recId" type="int">
+                <column name="REC_ID" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="receiptmaster" class="com.model.pojo.Receiptmaster" update="false" insert="false" fetch="select">
+            <column name="REC_ID" not-null="true" />
+        </many-to-one>
+        <property name="recByorto" type="string">
+            <column name="REC_BYORTO" length="20" not-null="true" />
+        </property>
+        <property name="recNature" type="string">
+            <column name="REC_NATURE" length="50" not-null="true" />
+        </property>
+        <property name="recParticulars" type="string">
+            <column name="REC_PARTICULARS" length="50" not-null="true" />
+        </property>
+        <property name="recAccId" type="int">
+            <column name="REC_ACC_ID" not-null="true" />
+        </property>
+        <property name="recDramount" type="big_decimal">
+            <column name="REC_DRAMOUNT" precision="18" />
+        </property>
+        <property name="recCramount" type="big_decimal">
+            <column name="REC_CRAMOUNT" precision="18" />
+        </property>
+    </class>
+</hibernate-mapping>

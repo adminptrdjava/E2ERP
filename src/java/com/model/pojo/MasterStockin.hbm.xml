@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13 Apr, 2015 11:03:06 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.model.pojo.MasterStockin" table="master_stockin" catalog="e2rp" optimistic-lock="version">
+        <id name="MStockinId" type="java.lang.Integer">
+            <column name="M_STOCKIN_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="companyId" type="int">
+            <column name="COMPANY_ID" not-null="true" />
+        </property>
+        <property name="divitionId" type="int">
+            <column name="DIVITION_ID" not-null="true" />
+        </property>
+        <property name="itemId" type="int">
+            <column name="ITEM_ID" not-null="true" />
+        </property>
+        <property name="quantity" type="big_decimal">
+            <column name="QUANTITY" precision="18" not-null="true" />
+        </property>
+        <property name="unit" type="string">
+            <column name="UNIT" length="50" not-null="true" />
+        </property>
+        <property name="mstkDate" type="timestamp">
+            <column name="MSTK_DATE" length="19" not-null="true" />
+        </property>
+        <property name="wodtlsId" type="int">
+            <column name="WODTLS_ID" not-null="true" />
+        </property>
+        <property name="challanNo" type="string">
+            <column name="CHALLAN_NO" length="50" not-null="true" />
+        </property>
+        <property name="unitPrice" type="big_decimal">
+            <column name="UNIT_PRICE" precision="18" not-null="true" />
+        </property>
+        <property name="totalPrice" type="big_decimal">
+            <column name="TOTAL_PRICE" precision="18" not-null="true" />
+        </property>
+        <property name="c3" type="string">
+            <column name="C3" length="50" not-null="true" />
+        </property>
+        <property name="c4" type="string">
+            <column name="C4" length="50" />
+        </property>
+        <property name="c5" type="int">
+            <column name="C5" not-null="true" />
+        </property>
+        <property name="inDt" type="timestamp">
+            <column name="IN_DT" length="19" not-null="true" />
+        </property>
+        <property name="createdBy" type="int">
+            <column name="CREATED_BY" not-null="true" />
+        </property>
+        <property name="createdDt" type="timestamp">
+            <column name="CREATED_DT" length="19" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

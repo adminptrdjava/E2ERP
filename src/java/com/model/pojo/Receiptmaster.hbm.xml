@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13 Apr, 2015 11:03:06 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.model.pojo.Receiptmaster" table="receiptmaster" catalog="e2rp" optimistic-lock="version">
+        <id name="recId" type="java.lang.Integer">
+            <column name="REC_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="recCodeid" type="int">
+            <column name="REC_CODEID" not-null="true" />
+        </property>
+        <property name="recCode" type="string">
+            <column name="REC_CODE" length="20" not-null="true" />
+        </property>
+        <property name="recTocid" type="int">
+            <column name="REC_TOCID" not-null="true" />
+        </property>
+        <property name="recVoudate" type="timestamp">
+            <column name="REC_VOUDATE" length="19" not-null="true" />
+        </property>
+        <property name="recNarration" type="string">
+            <column name="REC_NARRATION" not-null="true" />
+        </property>
+        <property name="recType" type="string">
+            <column name="REC_TYPE" length="50" not-null="true" />
+        </property>
+        <property name="recChqno" type="java.lang.Integer">
+            <column name="REC_CHQNO" />
+        </property>
+        <property name="recChqdate" type="string">
+            <column name="REC_CHQDATE" length="50" />
+        </property>
+        <set name="receiptdetailses" table="receiptdetails" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="REC_ID" not-null="true" />
+            </key>
+            <one-to-many class="com.model.pojo.Receiptdetails" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13 Apr, 2015 11:03:06 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.model.pojo.FeesMaster" table="fees_master" catalog="e2rp" optimistic-lock="version">
+        <id name="feesId" type="java.lang.Integer">
+            <column name="FEES_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="class_" type="string">
+            <column name="CLASS" length="20" not-null="true" />
+        </property>
+        <property name="admissionFee" type="big_decimal">
+            <column name="ADMISSION_FEE" precision="18" not-null="true" />
+        </property>
+        <property name="tutionFee" type="big_decimal">
+            <column name="TUTION_FEE" precision="18" not-null="true" />
+        </property>
+        <property name="computerFee" type="big_decimal">
+            <column name="COMPUTER_FEE" precision="18" not-null="true" />
+        </property>
+        <property name="devlopmentFee" type="big_decimal">
+            <column name="DEVLOPMENT_FEE" precision="18" not-null="true" />
+        </property>
+        <property name="cautonMoney" type="big_decimal">
+            <column name="CAUTON_MONEY" precision="18" not-null="true" />
+        </property>
+        <property name="anualMusic" type="big_decimal">
+            <column name="ANUAL_MUSIC" precision="18" not-null="true" />
+        </property>
+        <property name="medicalFee" type="big_decimal">
+            <column name="MEDICAL_FEE" precision="18" not-null="true" />
+        </property>
+        <property name="total" type="big_decimal">
+            <column name="TOTAL" precision="18" not-null="true" />
+        </property>
+        <property name="createdBy" type="java.lang.Integer">
+            <column name="CREATED_BY" />
+        </property>
+        <property name="createdOn" type="timestamp">
+            <column name="CREATED_ON" length="19" not-null="true" />
+        </property>
+        <property name="feesIsactive" type="string">
+            <column name="FEES_ISACTIVE" length="2" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13 Apr, 2015 11:03:06 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.model.pojo.Enquiry" table="enquiry" catalog="e2rp" optimistic-lock="version">
+        <id name="slid" type="java.lang.Integer">
+            <column name="SLID" />
+            <generator class="identity" />
+        </id>
+        <property name="enqid" type="string">
+            <column name="ENQID" length="30" not-null="true" />
+        </property>
+        <property name="enqdate" type="timestamp">
+            <column name="ENQDATE" length="19" not-null="true" />
+        </property>
+        <property name="enqmode" type="string">
+            <column name="ENQMODE" length="20" not-null="true" />
+        </property>
+        <property name="studentname" type="string">
+            <column name="STUDENTNAME" length="50" not-null="true" />
+        </property>
+        <property name="dob" type="timestamp">
+            <column name="DOB" length="19" not-null="true" />
+        </property>
+        <property name="age" type="int">
+            <column name="AGE" not-null="true" />
+        </property>
+        <property name="gender" type="string">
+            <column name="GENDER" length="50" not-null="true" />
+        </property>
+        <property name="guardianname" type="string">
+            <column name="GUARDIANNAME" length="50" not-null="true" />
+        </property>
+        <property name="email" type="string">
+            <column name="EMAIL" length="50" not-null="true" />
+        </property>
+        <property name="mobileno" type="string">
+            <column name="MOBILENO" length="20" not-null="true" />
+        </property>
+        <property name="class_" type="string">
+            <column name="CLASS" length="10" not-null="true" />
+        </property>
+        <property name="stream" type="string">
+            <column name="STREAM" length="250" not-null="true" />
+        </property>
+        <property name="marks" type="long">
+            <column name="MARKS" precision="18" scale="0" not-null="true" />
+        </property>
+        <property name="parentoccupation" type="string">
+            <column name="PARENTOCCUPATION" length="50" not-null="true" />
+        </property>
+        <property name="annualincome" type="long">
+            <column name="ANNUALINCOME" precision="18" scale="0" not-null="true" />
+        </property>
+        <property name="parentqualification" type="string">
+            <column name="PARENTQUALIFICATION" length="20" not-null="true" />
+        </property>
+        <property name="operatorname" type="string">
+            <column name="OPERATORNAME" length="20" not-null="true" />
+        </property>
+        <property name="reference" type="string">
+            <column name="REFERENCE" length="30" not-null="true" />
+        </property>
+        <property name="criteria" type="string">
+            <column name="CRITERIA" length="250" not-null="true" />
+        </property>
+        <property name="address" type="string">
+            <column name="ADDRESS" length="250" not-null="true" />
+        </property>
+        <property name="city" type="string">
+            <column name="CITY" length="250" not-null="true" />
+        </property>
+        <property name="othercityname" type="string">
+            <column name="OTHERCITYNAME" length="30" not-null="true" />
+        </property>
+        <property name="state" type="string">
+            <column name="STATE" length="30" not-null="true" />
+        </property>
+        <property name="pincode" type="int">
+            <column name="PINCODE" not-null="true" />
+        </property>
+        <property name="enqstatus" type="int">
+            <column name="ENQSTATUS" not-null="true" />
+        </property>
+        <property name="followupstatus" type="int">
+            <column name="FOLLOWUPSTATUS" not-null="true" />
+        </property>
+        <property name="schoolmedium" type="string">
+            <column name="SCHOOLMEDIUM" length="30" not-null="true" />
+        </property>
+        <property name="interviewdate" type="string">
+            <column name="INTERVIEWDATE" length="30" not-null="true" />
+        </property>
+        <property name="physicalstatus" type="string">
+            <column name="PHYSICALSTATUS" length="30" not-null="true" />
+        </property>
+        <property name="castcata" type="string">
+            <column name="CASTCATA" length="30" not-null="true" />
+        </property>
+        <property name="flag4" type="string">
+            <column name="FLAG_4" length="30" not-null="true" />
+        </property>
+        <property name="flag5" type="string">
+            <column name="FLAG_5" length="30" not-null="true" />
+        </property>
+        <property name="createdby" type="int">
+            <column name="CREATEDBY" not-null="true" />
+        </property>
+        <property name="createdon" type="timestamp">
+            <column name="CREATEDON" length="19" not-null="true" />
+        </property>
+        <property name="editedby" type="string">
+            <column name="EDITEDBY" length="30" not-null="true" />
+        </property>
+        <property name="editedon" type="timestamp">
+            <column name="EDITEDON" length="19" not-null="true" />
+        </property>
+        <property name="enqIsactive" type="string">
+            <column name="ENQ_ISACTIVE" length="30" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

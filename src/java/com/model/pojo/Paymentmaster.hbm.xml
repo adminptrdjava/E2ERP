@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13 Apr, 2015 11:03:06 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.model.pojo.Paymentmaster" table="paymentmaster" catalog="e2rp" optimistic-lock="version">
+        <id name="pymId" type="java.lang.Integer">
+            <column name="PYM_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="pymCodeid" type="int">
+            <column name="PYM_CODEID" not-null="true" />
+        </property>
+        <property name="pymCode" type="string">
+            <column name="PYM_CODE" length="20" not-null="true" />
+        </property>
+        <property name="pymTocid" type="int">
+            <column name="PYM_TOCID" not-null="true" />
+        </property>
+        <property name="pymVoudate" type="timestamp">
+            <column name="PYM_VOUDATE" length="19" not-null="true" />
+        </property>
+        <property name="pymNarration" type="string">
+            <column name="PYM_NARRATION" not-null="true" />
+        </property>
+        <property name="pymType" type="string">
+            <column name="PYM_TYPE" length="50" not-null="true" />
+        </property>
+        <property name="pymChqno" type="java.lang.Integer">
+            <column name="PYM_CHQNO" />
+        </property>
+        <property name="pymChqdate" type="string">
+            <column name="PYM_CHQDATE" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13 Apr, 2015 11:03:06 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.model.pojo.WorkorderPurchase" table="workorder_purchase" catalog="e2rp" optimistic-lock="version">
+        <id name="slNo" type="java.lang.Integer">
+            <column name="SL_NO" />
+            <generator class="identity" />
+        </id>
+        <property name="compId" type="int">
+            <column name="COMP_ID" not-null="true" />
+        </property>
+        <property name="divId" type="int">
+            <column name="DIV_ID" not-null="true" />
+        </property>
+        <property name="ledgerId" type="int">
+            <column name="LEDGER_ID" not-null="true" />
+        </property>
+        <property name="itemId" type="int">
+            <column name="ITEM_ID" not-null="true" />
+        </property>
+        <property name="workorderNo" type="string">
+            <column name="WORKORDER_NO" length="50" not-null="true" />
+        </property>
+        <property name="invoiceNo" type="string">
+            <column name="INVOICE_NO" length="50" not-null="true" />
+        </property>
+        <property name="invoiceDate" type="timestamp">
+            <column name="INVOICE_DATE" length="19" not-null="true" />
+        </property>
+        <property name="receivedDate" type="timestamp">
+            <column name="RECEIVED_DATE" length="19" not-null="true" />
+        </property>
+        <property name="grossAmount" type="big_decimal">
+            <column name="GROSS_AMOUNT" precision="18" not-null="true" />
+        </property>
+        <property name="taxAmount" type="big_decimal">
+            <column name="TAX_AMOUNT" precision="18" not-null="true" />
+        </property>
+        <property name="roundOff" type="big_decimal">
+            <column name="ROUND_OFF" precision="18" />
+        </property>
+        <property name="othersAmount" type="big_decimal">
+            <column name="OTHERS_AMOUNT" precision="18" />
+        </property>
+        <property name="netAmount" type="big_decimal">
+            <column name="NET_AMOUNT" precision="18" not-null="true" />
+        </property>
+        <property name="narration" type="string">
+            <column name="NARRATION" length="50" />
+        </property>
+        <property name="createdBy" type="java.lang.Integer">
+            <column name="CREATED_BY" />
+        </property>
+        <property name="createdDt" type="timestamp">
+            <column name="CREATED_DT" length="19" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

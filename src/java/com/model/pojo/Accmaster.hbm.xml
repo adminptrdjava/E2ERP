@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13 Apr, 2015 11:03:06 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.model.pojo.Accmaster" table="accmaster" catalog="e2rp" optimistic-lock="version">
+        <id name="accId" type="java.lang.Integer">
+            <column name="ACC_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="accName" type="string">
+            <column name="ACC_NAME" length="100" not-null="true" />
+        </property>
+        <property name="accType" type="string">
+            <column name="ACC_TYPE" length="50" />
+        </property>
+        <property name="accParentid" type="int">
+            <column name="ACC_PARENTID" not-null="true" />
+        </property>
+        <property name="accCreateddt" type="timestamp">
+            <column name="ACC_CREATEDDT" length="19" not-null="true" />
+        </property>
+        <property name="accCreatedby" type="int">
+            <column name="ACC_CREATEDBY" not-null="true" />
+        </property>
+        <property name="accIsdeleteable" type="string">
+            <column name="ACC_ISDELETEABLE" length="5" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

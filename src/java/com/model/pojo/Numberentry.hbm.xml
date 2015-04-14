@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13 Apr, 2015 11:03:06 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.model.pojo.Numberentry" table="numberentry" catalog="e2rp" optimistic-lock="version">
+        <id name="marksId" type="java.lang.Integer">
+            <column name="MARKS_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="examType" type="string">
+            <column name="EXAM_TYPE" length="50" not-null="true" />
+        </property>
+        <property name="stream" type="string">
+            <column name="STREAM" length="50" not-null="true" />
+        </property>
+        <property name="section" type="string">
+            <column name="SECTION" length="50" not-null="true" />
+        </property>
+        <property name="academicYear" type="string">
+            <column name="ACADEMIC_YEAR" length="50" not-null="true" />
+        </property>
+        <property name="className" type="string">
+            <column name="CLASS_NAME" length="50" not-null="true" />
+        </property>
+        <property name="roll" type="string">
+            <column name="ROLL" length="50" not-null="true" />
+        </property>
+        <property name="subjectName" type="string">
+            <column name="SUBJECT_NAME" length="50" not-null="true" />
+        </property>
+        <property name="subjectId" type="int">
+            <column name="SUBJECT_ID" not-null="true" />
+        </property>
+        <property name="totalMarks" type="string">
+            <column name="TOTAL_MARKS" length="50" not-null="true" />
+        </property>
+        <property name="obtainMarks" type="string">
+            <column name="OBTAIN_MARKS" length="50" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

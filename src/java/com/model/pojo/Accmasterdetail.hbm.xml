@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13 Apr, 2015 11:03:06 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.model.pojo.Accmasterdetail" table="accmasterdetail" catalog="e2rp" optimistic-lock="version">
+        <composite-id name="id" class="com.model.pojo.AccmasterdetailId">
+            <key-property name="accDtlid" type="int">
+                <column name="ACC_DTLID" />
+            </key-property>
+            <key-property name="accId" type="int">
+                <column name="ACC_ID" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="account" class="com.model.pojo.Account" update="false" insert="false" fetch="select">
+            <column name="ACC_ID" not-null="true" />
+        </many-to-one>
+        <property name="accName" type="string">
+            <column name="ACC_NAME" length="50" />
+        </property>
+        <property name="accAddress" type="string">
+            <column name="ACC_ADDRESS" />
+        </property>
+        <property name="accPhoneno" type="string">
+            <column name="ACC_PHONENO" length="20" />
+        </property>
+        <property name="accEmail" type="string">
+            <column name="ACC_EMAIL" length="100" />
+        </property>
+        <property name="accOpbalance" type="big_decimal">
+            <column name="ACC_OPBALANCE" precision="18" />
+        </property>
+        <property name="accRemarks" type="string">
+            <column name="ACC_REMARKS" length="250" />
+        </property>
+    </class>
+</hibernate-mapping>

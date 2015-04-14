@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13 Apr, 2015 11:03:06 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.model.pojo.InterviewDate" table="interview_date" catalog="e2rp" optimistic-lock="version">
+        <id name="postId" type="java.lang.Integer">
+            <column name="POST_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="postName" type="string">
+            <column name="POST_NAME" length="50" />
+        </property>
+        <property name="interviewDate" type="string">
+            <column name="INTERVIEW_DATE" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>

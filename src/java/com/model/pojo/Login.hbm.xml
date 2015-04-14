@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13 Apr, 2015 11:03:06 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.model.pojo.Login" table="login" catalog="e2rp" optimistic-lock="version">
+        <id name="loginId" type="java.lang.Integer">
+            <column name="LOGIN_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="loginUsername" type="string">
+            <column name="LOGIN_USERNAME" length="20" not-null="true" />
+        </property>
+        <property name="loginPassword" type="string">
+            <column name="LOGIN_PASSWORD" length="20" not-null="true" />
+        </property>
+        <property name="loginRole" type="string">
+            <column name="LOGIN_ROLE" length="20" not-null="true" />
+        </property>
+        <property name="createdBy" type="java.lang.Integer">
+            <column name="CREATED_BY" />
+        </property>
+        <property name="createdOn" type="timestamp">
+            <column name="CREATED_ON" length="19" not-null="true" />
+        </property>
+        <property name="classIsactive" type="string">
+            <column name="CLASS_ISACTIVE" length="10" not-null="true" />
+        </property>
+        <property name="presentStatus" type="string">
+            <column name="`PRESENT STATUS`" length="10" />
+        </property>
+    </class>
+</hibernate-mapping>

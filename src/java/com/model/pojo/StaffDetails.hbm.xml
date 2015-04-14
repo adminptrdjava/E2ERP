@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13 Apr, 2015 11:03:06 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.model.pojo.StaffDetails" table="staff_details" catalog="e2rp" optimistic-lock="version">
+        <id name="salaryId" type="java.lang.Integer">
+            <column name="SALARY_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="employeeId" type="int">
+            <column name="EMPLOYEE_ID" not-null="true" />
+        </property>
+        <property name="designationId" type="int">
+            <column name="DESIGNATION_ID" not-null="true" />
+        </property>
+        <property name="basic" type="big_decimal">
+            <column name="BASIC" precision="7" not-null="true" />
+        </property>
+        <property name="hra" type="big_decimal">
+            <column name="HRA" precision="7" not-null="true" />
+        </property>
+        <property name="da" type="big_decimal">
+            <column name="DA" precision="7" not-null="true" />
+        </property>
+        <property name="conveyance" type="big_decimal">
+            <column name="CONVEYANCE" precision="7" not-null="true" />
+        </property>
+        <property name="otherallowences" type="big_decimal">
+            <column name="OTHERALLOWENCES" precision="7" not-null="true" />
+        </property>
+        <property name="totalLeave" type="string">
+            <column name="TOTAL_LEAVE" length="50" not-null="true" />
+        </property>
+        <property name="flag1" type="int">
+            <column name="FLAG_1" not-null="true" />
+        </property>
+        <property name="flag2" type="string">
+            <column name="FLAG_2" length="50" not-null="true" />
+        </property>
+        <property name="flag3" type="string">
+            <column name="FLAG_3" length="50" not-null="true" />
+        </property>
+        <property name="flag4" type="string">
+            <column name="FLAG_4" length="50" not-null="true" />
+        </property>
+        <property name="flag5" type="string">
+            <column name="FLAG_5" length="50" not-null="true" />
+        </property>
+        <property name="salaryIsactive" type="string">
+            <column name="SALARY_ISACTIVE" length="10" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

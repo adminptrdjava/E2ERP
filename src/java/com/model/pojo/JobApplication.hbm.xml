@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13 Apr, 2015 11:03:06 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.model.pojo.JobApplication" table="job_application" catalog="e2rp" optimistic-lock="version">
+        <id name="applicationId" type="java.lang.Integer">
+            <column name="APPLICATION_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="adId" type="int">
+            <column name="AD_ID" not-null="true" />
+        </property>
+        <property name="applicantName" type="string">
+            <column name="APPLICANT_NAME" length="50" not-null="true" />
+        </property>
+        <property name="contactNo" type="string">
+            <column name="CONTACT_NO" length="50" not-null="true" />
+        </property>
+        <property name="email" type="string">
+            <column name="EMAIL" length="50" not-null="true" />
+        </property>
+        <property name="address" type="string">
+            <column name="ADDRESS" length="50" not-null="true" />
+        </property>
+        <property name="highestQualification" type="string">
+            <column name="HIGHEST_QUALIFICATION" length="50" not-null="true" />
+        </property>
+        <property name="specialization" type="string">
+            <column name="SPECIALIZATION" length="50" not-null="true" />
+        </property>
+        <property name="experience" type="string">
+            <column name="EXPERIENCE" length="50" not-null="true" />
+        </property>
+        <property name="applicationDate" type="date">
+            <column name="APPLICATION_DATE" length="10" />
+        </property>
+        <property name="appFlag1" type="int">
+            <column name="APP_FLAG_1" not-null="true" />
+        </property>
+        <property name="appFlag2" type="int">
+            <column name="APP_FLAG_2" not-null="true" />
+        </property>
+        <property name="appIsactive" type="string">
+            <column name="APP_ISACTIVE" length="30" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13 Apr, 2015 11:03:06 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.model.pojo.LiberyReg" table="libery_reg" catalog="e2rp" optimistic-lock="version">
+        <id name="libregSlid" type="java.lang.Integer">
+            <column name="LIBREG_SLID" />
+            <generator class="identity" />
+        </id>
+        <property name="libCardNo" type="string">
+            <column name="LIB_CARD_NO" length="20" />
+        </property>
+        <property name="memtypeId" type="int">
+            <column name="MEMTYPE_ID" not-null="true" />
+        </property>
+        <property name="studentId" type="int">
+            <column name="STUDENT_ID" not-null="true" />
+        </property>
+        <property name="empId" type="int">
+            <column name="EMP_ID" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

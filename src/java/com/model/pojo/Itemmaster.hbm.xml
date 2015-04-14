@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13 Apr, 2015 11:03:06 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.model.pojo.Itemmaster" table="itemmaster" catalog="e2rp" optimistic-lock="version">
+        <id name="itemId" type="java.lang.Integer">
+            <column name="ITEM_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="itemCode" type="string">
+            <column name="ITEM_CODE" length="20" not-null="true" />
+        </property>
+        <property name="itemName" type="string">
+            <column name="ITEM_NAME" length="100" not-null="true" />
+        </property>
+        <property name="itemType" type="string">
+            <column name="ITEM_TYPE" length="50" not-null="true" />
+        </property>
+        <property name="itemSuppid" type="int">
+            <column name="ITEM_SUPPID" not-null="true" />
+        </property>
+        <property name="itemDescr" type="string">
+            <column name="ITEM_DESCR" not-null="true" />
+        </property>
+        <property name="itemSize" type="string">
+            <column name="ITEM_SIZE" length="50" not-null="true" />
+        </property>
+        <property name="itemUom" type="string">
+            <column name="ITEM_UOM" length="10" not-null="true" />
+        </property>
+        <property name="itemCreatedby" type="int">
+            <column name="ITEM_CREATEDBY" not-null="true" />
+        </property>
+        <property name="itemCreateddt" type="timestamp">
+            <column name="ITEM_CREATEDDT" length="19" not-null="true" />
+        </property>
+        <property name="itemIsactive" type="string">
+            <column name="ITEM_ISACTIVE" length="1" not-null="true" />
+        </property>
+        <set name="itemdtls" table="itemdtl" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="ITEM_ID" not-null="true" />
+            </key>
+            <one-to-many class="com.model.pojo.Itemdtl" />
+        </set>
+    </class>
+</hibernate-mapping>

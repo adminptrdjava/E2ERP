@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13 Apr, 2015 11:03:06 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.model.pojo.WorkorderDetails" table="workorder_details" catalog="e2rp" optimistic-lock="version">
+        <id name="wodtlsId" type="java.lang.Integer">
+            <column name="WODTLS_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="orderNo" type="string">
+            <column name="ORDER_NO" length="20" not-null="true" />
+        </property>
+        <property name="itemId" type="int">
+            <column name="ITEM_ID" not-null="true" />
+        </property>
+        <property name="jobdetls" type="string">
+            <column name="JOBDETLS" length="100" not-null="true" />
+        </property>
+        <property name="quantity" type="big_decimal">
+            <column name="QUANTITY" precision="18" not-null="true" />
+        </property>
+        <property name="unit" type="string">
+            <column name="UNIT" length="50" not-null="true" />
+        </property>
+        <property name="rate" type="string">
+            <column name="RATE" length="50" not-null="true" />
+        </property>
+        <property name="totalvalue" type="big_decimal">
+            <column name="TOTALVALUE" precision="18" not-null="true" />
+        </property>
+        <property name="descriptions" type="string">
+            <column name="DESCRIPTIONS" length="100" not-null="true" />
+        </property>
+        <property name="createdBy" type="int">
+            <column name="CREATED_BY" not-null="true" />
+        </property>
+        <property name="createdDt" type="timestamp">
+            <column name="CREATED_DT" length="19" not-null="true" />
+        </property>
+        <property name="suppName" type="string">
+            <column name="SUPP_NAME" length="50" not-null="true" />
+        </property>
+        <property name="suppPhone" type="string">
+            <column name="SUPP_PHONE" length="50" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

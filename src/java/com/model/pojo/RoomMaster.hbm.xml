@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13 Apr, 2015 11:03:06 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.model.pojo.RoomMaster" table="room_master" catalog="e2rp" optimistic-lock="version">
+        <id name="roomId" type="java.lang.Integer">
+            <column name="ROOM_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="roomName" type="string">
+            <column name="ROOM_NAME" length="50" not-null="true" />
+        </property>
+        <property name="floorId" type="int">
+            <column name="FLOOR_ID" not-null="true" />
+        </property>
+        <property name="flag1" type="string">
+            <column name="FLAG_1" length="50" not-null="true" />
+        </property>
+        <property name="flag2" type="string">
+            <column name="FLAG_2" length="50" not-null="true" />
+        </property>
+        <property name="flag3" type="string">
+            <column name="FLAG_3" length="50" not-null="true" />
+        </property>
+        <property name="roomIsactive" type="string">
+            <column name="ROOM_ISACTIVE" length="10" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

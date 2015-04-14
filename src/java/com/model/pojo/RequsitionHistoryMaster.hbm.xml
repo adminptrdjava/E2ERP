@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13 Apr, 2015 11:03:06 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.model.pojo.RequsitionHistoryMaster" table="requsition_history_master" catalog="e2rp" optimistic-lock="version">
+        <id name="reqhistoryId" type="java.lang.Integer">
+            <column name="REQHISTORY_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="reqSlno" type="int">
+            <column name="REQ_SLNO" not-null="true" />
+        </property>
+        <property name="reqId" type="string">
+            <column name="REQ_ID" length="50" not-null="true" />
+        </property>
+        <property name="itemId" type="int">
+            <column name="ITEM_ID" not-null="true" />
+        </property>
+        <property name="quantity" type="big_decimal">
+            <column name="QUANTITY" precision="18" not-null="true" />
+        </property>
+        <property name="vendorId" type="int">
+            <column name="VENDOR_ID" not-null="true" />
+        </property>
+        <property name="reference" type="string">
+            <column name="REFERENCE" length="50" not-null="true" />
+        </property>
+        <property name="reqStatus" type="string">
+            <column name="REQ_STATUS" length="50" not-null="true" />
+        </property>
+        <property name="flag" type="string">
+            <column name="FLAG" not-null="true" />
+        </property>
+        <property name="createdby" type="int">
+            <column name="CREATEDBY" not-null="true" />
+        </property>
+        <property name="createddt" type="timestamp">
+            <column name="CREATEDDT" length="19" not-null="true" />
+        </property>
+        <property name="editedby" type="int">
+            <column name="EDITEDBY" not-null="true" />
+        </property>
+        <property name="editeddt" type="timestamp">
+            <column name="EDITEDDT" length="19" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

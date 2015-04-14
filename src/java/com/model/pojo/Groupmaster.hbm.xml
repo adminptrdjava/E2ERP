@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13 Apr, 2015 11:03:06 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.model.pojo.Groupmaster" table="groupmaster" catalog="e2rp" optimistic-lock="version">
+        <id name="grpId" type="java.lang.Integer">
+            <column name="GRP_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="grpCodeid" type="int">
+            <column name="GRP_CODEID" not-null="true" />
+        </property>
+        <property name="grpCode" type="string">
+            <column name="GRP_CODE" length="50" not-null="true" />
+        </property>
+        <property name="grpTocid" type="int">
+            <column name="GRP_TOCID" not-null="true" />
+        </property>
+        <property name="grpName" type="string">
+            <column name="GRP_NAME" length="10" not-null="true" />
+        </property>
+        <property name="grpMinAge" type="int">
+            <column name="GRP_MIN_AGE" not-null="true" />
+        </property>
+        <property name="grpMaxAge" type="int">
+            <column name="GRP_MAX_AGE" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

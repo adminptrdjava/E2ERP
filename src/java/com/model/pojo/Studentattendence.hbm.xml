@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13 Apr, 2015 11:03:06 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.model.pojo.Studentattendence" table="studentattendence" catalog="e2rp" optimistic-lock="version">
+        <id name="attendanceId" type="java.lang.Integer">
+            <column name="ATTENDANCE_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="classId" type="int">
+            <column name="CLASS_ID" not-null="true" />
+        </property>
+        <property name="section" type="string">
+            <column name="SECTION" length="50" not-null="true" />
+        </property>
+        <property name="studentId" type="int">
+            <column name="STUDENT_ID" not-null="true" />
+        </property>
+        <property name="subjectId" type="int">
+            <column name="SUBJECT_ID" not-null="true" />
+        </property>
+        <property name="teacherId" type="int">
+            <column name="TEACHER_ID" not-null="true" />
+        </property>
+        <property name="attendancestatus" type="int">
+            <column name="ATTENDANCESTATUS" not-null="true" />
+        </property>
+        <property name="attenDate" type="string">
+            <column name="ATTEN_DATE" length="50" not-null="true" />
+        </property>
+        <property name="createdBy" type="int">
+            <column name="CREATED_BY" not-null="true" />
+        </property>
+        <property name="createdon" type="date">
+            <column name="CREATEDON" length="10" />
+        </property>
+    </class>
+</hibernate-mapping>

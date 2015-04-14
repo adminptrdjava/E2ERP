@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13 Apr, 2015 11:03:06 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.model.pojo.RoutineMaster" table="routine_master" catalog="e2rp" optimistic-lock="version">
+        <id name="rmId" type="java.lang.Integer">
+            <column name="RM_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="classId" type="int">
+            <column name="CLASS_ID" not-null="true" />
+        </property>
+        <property name="section" type="string">
+            <column name="SECTION" length="20" not-null="true" />
+        </property>
+        <property name="createdBy" type="int">
+            <column name="CREATED_BY" not-null="true" />
+        </property>
+        <property name="createdOn" type="timestamp">
+            <column name="CREATED_ON" length="19" not-null="true" />
+        </property>
+        <property name="rmIsactive" type="string">
+            <column name="RM_ISACTIVE" length="10" not-null="true" />
+        </property>
+        <set name="routineDetailses" table="routine_details" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="RM_ID" not-null="true" />
+            </key>
+            <one-to-many class="com.model.pojo.RoutineDetails" />
+        </set>
+    </class>
+</hibernate-mapping>
