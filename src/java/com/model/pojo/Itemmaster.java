@@ -1,17 +1,13 @@
 package com.model.pojo;
-// Generated 13 Apr, 2015 11:03:03 PM by Hibernate Tools 4.3.1
+// Generated 15 Apr, 2015 12:30:14 AM by Hibernate Tools 4.3.1
 
 
 import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import static javax.persistence.GenerationType.IDENTITY;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -37,25 +33,11 @@ public class Itemmaster  implements java.io.Serializable {
      private int itemCreatedby;
      private Date itemCreateddt;
      private String itemIsactive;
-     private Set<Itemdtl> itemdtls = new HashSet<Itemdtl>(0);
 
     public Itemmaster() {
     }
 
-	
     public Itemmaster(String itemCode, String itemName, String itemType, int itemSuppid, String itemDescr, String itemSize, String itemUom, int itemCreatedby, Date itemCreateddt, String itemIsactive) {
-        this.itemCode = itemCode;
-        this.itemName = itemName;
-        this.itemType = itemType;
-        this.itemSuppid = itemSuppid;
-        this.itemDescr = itemDescr;
-        this.itemSize = itemSize;
-        this.itemUom = itemUom;
-        this.itemCreatedby = itemCreatedby;
-        this.itemCreateddt = itemCreateddt;
-        this.itemIsactive = itemIsactive;
-    }
-    public Itemmaster(String itemCode, String itemName, String itemType, int itemSuppid, String itemDescr, String itemSize, String itemUom, int itemCreatedby, Date itemCreateddt, String itemIsactive, Set<Itemdtl> itemdtls) {
        this.itemCode = itemCode;
        this.itemName = itemName;
        this.itemType = itemType;
@@ -66,7 +48,6 @@ public class Itemmaster  implements java.io.Serializable {
        this.itemCreatedby = itemCreatedby;
        this.itemCreateddt = itemCreateddt;
        this.itemIsactive = itemIsactive;
-       this.itemdtls = itemdtls;
     }
    
      @Id @GeneratedValue(strategy=IDENTITY)
@@ -179,15 +160,6 @@ public class Itemmaster  implements java.io.Serializable {
     
     public void setItemIsactive(String itemIsactive) {
         this.itemIsactive = itemIsactive;
-    }
-
-@OneToMany(fetch=FetchType.LAZY, mappedBy="itemmaster")
-    public Set<Itemdtl> getItemdtls() {
-        return this.itemdtls;
-    }
-    
-    public void setItemdtls(Set<Itemdtl> itemdtls) {
-        this.itemdtls = itemdtls;
     }
 
 

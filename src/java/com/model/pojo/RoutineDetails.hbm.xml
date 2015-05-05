@@ -1,16 +1,16 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 13 Apr, 2015 11:03:06 PM by Hibernate Tools 4.3.1 -->
+<!-- Generated 15 Apr, 2015 12:30:18 AM by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
     <class name="com.model.pojo.RoutineDetails" table="routine_details" catalog="e2rp" optimistic-lock="version">
         <id name="rdId" type="java.lang.Integer">
             <column name="RD_ID" />
             <generator class="identity" />
         </id>
-        <many-to-one name="routineMaster" class="com.model.pojo.RoutineMaster" fetch="select">
+        <property name="rmId" type="int">
             <column name="RM_ID" not-null="true" />
-        </many-to-one>
+        </property>
         <property name="day" type="string">
             <column name="DAY" length="20" not-null="true" />
         </property>

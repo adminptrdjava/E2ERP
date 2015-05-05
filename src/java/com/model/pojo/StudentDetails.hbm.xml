@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 13 Apr, 2015 11:03:06 PM by Hibernate Tools 4.3.1 -->
+<!-- Generated 15 Apr, 2015 12:30:18 AM by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
     <class name="com.model.pojo.StudentDetails" table="student_details" catalog="e2rp" optimistic-lock="version">
         <id name="seriId" type="java.lang.Integer">
@@ -27,19 +27,19 @@
             <column name="ACADEMICYEAR" not-null="true" />
         </property>
         <property name="flag1" type="string">
-            <column name="FLAG_1" length="30" not-null="true" />
+            <column name="FLAG_1" length="30" />
         </property>
         <property name="flag2" type="string">
-            <column name="FLAG_2" length="30" not-null="true" />
+            <column name="FLAG_2" length="30" />
         </property>
         <property name="flag3" type="string">
-            <column name="FLAG_3" length="30" not-null="true" />
+            <column name="FLAG_3" length="30" />
         </property>
         <property name="flag4" type="string">
-            <column name="FLAG_4" length="30" not-null="true" />
+            <column name="FLAG_4" length="30" />
         </property>
         <property name="flag5" type="string">
-            <column name="FLAG_5" length="30" not-null="true" />
+            <column name="FLAG_5" length="30" />
         </property>
         <property name="studentIsactive" type="string">
             <column name="STUDENT_ISACTIVE" length="30" not-null="true" />

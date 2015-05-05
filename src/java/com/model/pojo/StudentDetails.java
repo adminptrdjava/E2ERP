@@ -1,5 +1,5 @@
 package com.model.pojo;
-// Generated 13 Apr, 2015 11:03:03 PM by Hibernate Tools 4.3.1
+// Generated 15 Apr, 2015 12:30:14 AM by Hibernate Tools 4.3.1
 
 
 import javax.persistence.Column;
@@ -36,6 +36,16 @@ public class StudentDetails  implements java.io.Serializable {
     public StudentDetails() {
     }
 
+	
+    public StudentDetails(int studentSlId, String class_, String section, String stream, String roll, int academicyear, String studentIsactive) {
+        this.studentSlId = studentSlId;
+        this.class_ = class_;
+        this.section = section;
+        this.stream = stream;
+        this.roll = roll;
+        this.academicyear = academicyear;
+        this.studentIsactive = studentIsactive;
+    }
     public StudentDetails(int studentSlId, String class_, String section, String stream, String roll, int academicyear, String flag1, String flag2, String flag3, String flag4, String flag5, String studentIsactive) {
        this.studentSlId = studentSlId;
        this.class_ = class_;
@@ -124,7 +134,7 @@ public class StudentDetails  implements java.io.Serializable {
     }
 
     
-    @Column(name="FLAG_1", nullable=false, length=30)
+    @Column(name="FLAG_1", length=30)
     public String getFlag1() {
         return this.flag1;
     }
@@ -134,7 +144,7 @@ public class StudentDetails  implements java.io.Serializable {
     }
 
     
-    @Column(name="FLAG_2", nullable=false, length=30)
+    @Column(name="FLAG_2", length=30)
     public String getFlag2() {
         return this.flag2;
     }
@@ -144,7 +154,7 @@ public class StudentDetails  implements java.io.Serializable {
     }
 
     
-    @Column(name="FLAG_3", nullable=false, length=30)
+    @Column(name="FLAG_3", length=30)
     public String getFlag3() {
         return this.flag3;
     }
@@ -154,7 +164,7 @@ public class StudentDetails  implements java.io.Serializable {
     }
 
     
-    @Column(name="FLAG_4", nullable=false, length=30)
+    @Column(name="FLAG_4", length=30)
     public String getFlag4() {
         return this.flag4;
     }
@@ -164,7 +174,7 @@ public class StudentDetails  implements java.io.Serializable {
     }
 
     
-    @Column(name="FLAG_5", nullable=false, length=30)
+    @Column(name="FLAG_5", length=30)
     public String getFlag5() {
         return this.flag5;
     }

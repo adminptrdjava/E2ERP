@@ -1,18 +1,14 @@
 package com.model.pojo;
-// Generated 13 Apr, 2015 11:03:03 PM by Hibernate Tools 4.3.1
+// Generated 15 Apr, 2015 12:30:14 AM by Hibernate Tools 4.3.1
 
 
 import java.math.BigDecimal;
 import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import static javax.persistence.GenerationType.IDENTITY;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -37,7 +33,6 @@ public class Account  implements java.io.Serializable {
      private String accPaymenttype;
      private String accOtherinfo;
      private Date accDate;
-     private Set<Accmasterdetail> accmasterdetails = new HashSet<Accmasterdetail>(0);
 
     public Account() {
     }
@@ -50,7 +45,7 @@ public class Account  implements java.io.Serializable {
         this.accPaidamot = accPaidamot;
         this.accDate = accDate;
     }
-    public Account(String accCOrSCode, String accType, BigDecimal accDueamount, String accChequeno, Date accChequedt, BigDecimal accPaidamot, String accPaymenttype, String accOtherinfo, Date accDate, Set<Accmasterdetail> accmasterdetails) {
+    public Account(String accCOrSCode, String accType, BigDecimal accDueamount, String accChequeno, Date accChequedt, BigDecimal accPaidamot, String accPaymenttype, String accOtherinfo, Date accDate) {
        this.accCOrSCode = accCOrSCode;
        this.accType = accType;
        this.accDueamount = accDueamount;
@@ -60,7 +55,6 @@ public class Account  implements java.io.Serializable {
        this.accPaymenttype = accPaymenttype;
        this.accOtherinfo = accOtherinfo;
        this.accDate = accDate;
-       this.accmasterdetails = accmasterdetails;
     }
    
      @Id @GeneratedValue(strategy=IDENTITY)
@@ -163,15 +157,6 @@ public class Account  implements java.io.Serializable {
     
     public void setAccDate(Date accDate) {
         this.accDate = accDate;
-    }
-
-@OneToMany(fetch=FetchType.LAZY, mappedBy="account")
-    public Set<Accmasterdetail> getAccmasterdetails() {
-        return this.accmasterdetails;
-    }
-    
-    public void setAccmasterdetails(Set<Accmasterdetail> accmasterdetails) {
-        this.accmasterdetails = accmasterdetails;
     }
 
 

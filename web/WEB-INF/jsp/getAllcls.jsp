@@ -7,11 +7,34 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib  uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
-   
+<link href="<c:url value="/resources/assets/GRID/css/demo_page.css"/>" rel="stylesheet" />
+<link href="<c:url value="/resources/assets/GRID/css/demo_table.css"/>" rel="stylesheet" />
+<link href="<c:url value="/resources/assets/GRID/css/demo_table_jui.css"/>" rel="stylesheet" />
+<link href="<c:url value="/resources/assets/GRID/css/jquery-ui-1.8.24.custom.css"/>" rel="stylesheet" />
+<script src="<c:url value="/resources/assets/GRID/js/jquery-min.js"/>" type="text/javascript"></script>
+ <script src="<c:url value="/resources/assets/GRID/js/jquery.dataTables.js"/>" type="text/javascript"></script>
+
+
+ 
+ <script type="text/javascript">
+var j = jQuery.noConflict();
+	    j(document).ready(function () {
+
+	            j("#sales").DataTable({
+
+	                "sPaginationType": "full_numbers",
+
+	                "bJQueryUI": true              
+
+	            });
+
+	        });
+
+	 </script>
 
 
 
-<table border="1">
+<table id="sales" class="display">
     <thead>
         <tr>
             <th>ID</th>

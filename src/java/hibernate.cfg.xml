@@ -7,6 +7,7 @@
     <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/e2rp?zeroDateTimeBehavior=convertToNull</property>
     <property name="hibernate.connection.username">root</property>
     <property name="hibernate.connection.password">1234</property>
+    <property name="hibernate.show_sql">true</property>
     <property name="hibernate.current_session_context_class">thread</property>
     <mapping resource="com/model/pojo/Login.hbm.xml"/>
     <mapping resource="com/model/pojo/Bookmaster.hbm.xml"/>
@@ -33,8 +34,10 @@
     <mapping resource="com/model/pojo/RoutineMaster.hbm.xml"/>
     <mapping resource="com/model/pojo/StaffAttendance.hbm.xml"/>
     <mapping resource="com/model/pojo/BookReturn.hbm.xml"/>
-    <mapping resource="com/model/pojo/Typeofcode.hbm.xml"/>
     <mapping resource="com/model/pojo/DesignationMaster.hbm.xml"/>
+    <mapping resource="com/model/pojo/Typeofcode.hbm.xml"/>
+    <mapping resource="com/model/pojo/LedgercrTbl.hbm.xml"/>
+    <mapping resource="com/model/pojo/LedgerdrTbl.hbm.xml"/>
     <mapping resource="com/model/pojo/StudentDetails.hbm.xml"/>
     <mapping resource="com/model/pojo/Contradetails.hbm.xml"/>
     <mapping resource="com/model/pojo/Journaldetails.hbm.xml"/>
@@ -52,6 +55,7 @@
     <mapping resource="com/model/pojo/Numberentry.hbm.xml"/>
     <mapping resource="com/model/pojo/Receiptmaster.hbm.xml"/>
     <mapping resource="com/model/pojo/Receiptdetails.hbm.xml"/>
+    <mapping resource="com/model/pojo/LiabilityTable.hbm.xml"/>
     <mapping resource="com/model/pojo/MasterStockin.hbm.xml"/>
     <mapping resource="com/model/pojo/InterviewDate.hbm.xml"/>
     <mapping resource="com/model/pojo/RoomMaster.hbm.xml"/>
@@ -75,6 +79,7 @@
     <mapping resource="com/model/pojo/RequsitionForward.hbm.xml"/>
     <mapping resource="com/model/pojo/Paymentdetails.hbm.xml"/>
     <mapping resource="com/model/pojo/ClassMaster.hbm.xml"/>
+    <mapping resource="com/model/pojo/TcodeMaster.hbm.xml"/>
     <mapping resource="com/model/pojo/CourseMaster.hbm.xml"/>
     <mapping resource="com/model/pojo/Productstockledger.hbm.xml"/>
   </session-factory>

@@ -1,16 +1,13 @@
 package com.model.pojo;
-// Generated 13 Apr, 2015 11:03:03 PM by Hibernate Tools 4.3.1
+// Generated 15 Apr, 2015 12:30:14 AM by Hibernate Tools 4.3.1
 
 
 import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import static javax.persistence.GenerationType.IDENTITY;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -26,7 +23,7 @@ public class RoutineDetails  implements java.io.Serializable {
 
 
      private Integer rdId;
-     private RoutineMaster routineMaster;
+     private int rmId;
      private String day;
      private String period;
      private int subjectId;
@@ -38,8 +35,8 @@ public class RoutineDetails  implements java.io.Serializable {
     public RoutineDetails() {
     }
 
-    public RoutineDetails(RoutineMaster routineMaster, String day, String period, int subjectId, int teacherId, int createdBy, Date createdOn, String rdIsactive) {
-       this.routineMaster = routineMaster;
+    public RoutineDetails(int rmId, String day, String period, int subjectId, int teacherId, int createdBy, Date createdOn, String rdIsactive) {
+       this.rmId = rmId;
        this.day = day;
        this.period = period;
        this.subjectId = subjectId;
@@ -61,14 +58,14 @@ public class RoutineDetails  implements java.io.Serializable {
         this.rdId = rdId;
     }
 
-@ManyToOne(fetch=FetchType.LAZY)
-    @JoinColumn(name="RM_ID", nullable=false)
-    public RoutineMaster getRoutineMaster() {
-        return this.routineMaster;
+    
+    @Column(name="RM_ID", nullable=false)
+    public int getRmId() {
+        return this.rmId;
     }
     
-    public void setRoutineMaster(RoutineMaster routineMaster) {
-        this.routineMaster = routineMaster;
+    public void setRmId(int rmId) {
+        this.rmId = rmId;
     }
 
     

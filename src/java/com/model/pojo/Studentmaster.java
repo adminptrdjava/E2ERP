@@ -1,5 +1,5 @@
 package com.model.pojo;
-// Generated 13 Apr, 2015 11:03:03 PM by Hibernate Tools 4.3.1
+// Generated 15 Apr, 2015 12:30:14 AM by Hibernate Tools 4.3.1
 
 
 import java.math.BigDecimal;
@@ -73,7 +73,7 @@ public class Studentmaster  implements java.io.Serializable {
      private String stuBirthcertificate;
      private String stuDisease;
      private int stuCurrentstatus;
-     private int stuFlag2;
+     private Integer stuFlag2;
      private String stuFlag3;
      private String stuFlag4;
      private String stuFlag5;
@@ -86,7 +86,64 @@ public class Studentmaster  implements java.io.Serializable {
     public Studentmaster() {
     }
 
-    public Studentmaster(String stuAdmissionno, String stuStudentid, String stuRegistrationid, Date stuAdmissiondate, int stuAdmissionstatus, String stuStudentname, Date stuDob, String stuGender, int stuAge, String stuBloodgroup, BigDecimal stuPreviousmarks, String stuAddressline, String stuState, String stuCity, int stuPincode, int stuNoofsiblings, String stuNatinality, String stuReligion, int stuPicture, String stuPhysicallychallenged, String stuChallengetype, String stuFathername, String stuFathermobile, String stuFatheroccupation, String stuFatherqualification, String stuFatheremail, String stuMothername, String stuMothermobile, String stuMotheroccupation, String stuMotherqualification, String stuMotheremail, BigDecimal stuFamilyincome, Date stuMarriagedate, String stuGuardianname, String stuGurdianoccupation, String stuRelatiowithstudent, String stuGuardianmobile, String stuGuardianemail, String stuSchoolname, String stuSchooladdress, String stuSchoolphone, String stuSchoolwebsite, String stuSchoolemail, int stuAdmissionyear, String stuIdentificationmark, String stuRationcard, String stuBirthcertificate, String stuDisease, int stuCurrentstatus, int stuFlag2, String stuFlag3, String stuFlag4, String stuFlag5, int stuCreatedby, Date stuCreatedon, int stuEditedby, Date stuEditedon, String stuIsactive) {
+	
+    public Studentmaster(String stuAdmissionno, String stuStudentid, String stuRegistrationid, Date stuAdmissiondate, int stuAdmissionstatus, String stuStudentname, Date stuDob, String stuGender, int stuAge, String stuBloodgroup, BigDecimal stuPreviousmarks, String stuAddressline, String stuState, String stuCity, int stuPincode, int stuNoofsiblings, String stuNatinality, String stuReligion, int stuPicture, String stuPhysicallychallenged, String stuChallengetype, String stuFathername, String stuFathermobile, String stuFatheroccupation, String stuFatherqualification, String stuFatheremail, String stuMothername, String stuMothermobile, String stuMotheroccupation, String stuMotherqualification, String stuMotheremail, BigDecimal stuFamilyincome, Date stuMarriagedate, String stuGuardianname, String stuGurdianoccupation, String stuRelatiowithstudent, String stuGuardianmobile, String stuGuardianemail, String stuSchoolname, String stuSchooladdress, String stuSchoolphone, String stuSchoolwebsite, String stuSchoolemail, int stuAdmissionyear, String stuIdentificationmark, String stuRationcard, String stuBirthcertificate, String stuDisease, int stuCurrentstatus, int stuCreatedby, Date stuCreatedon, int stuEditedby, Date stuEditedon, String stuIsactive) {
+        this.stuAdmissionno = stuAdmissionno;
+        this.stuStudentid = stuStudentid;
+        this.stuRegistrationid = stuRegistrationid;
+        this.stuAdmissiondate = stuAdmissiondate;
+        this.stuAdmissionstatus = stuAdmissionstatus;
+        this.stuStudentname = stuStudentname;
+        this.stuDob = stuDob;
+        this.stuGender = stuGender;
+        this.stuAge = stuAge;
+        this.stuBloodgroup = stuBloodgroup;
+        this.stuPreviousmarks = stuPreviousmarks;
+        this.stuAddressline = stuAddressline;
+        this.stuState = stuState;
+        this.stuCity = stuCity;
+        this.stuPincode = stuPincode;
+        this.stuNoofsiblings = stuNoofsiblings;
+        this.stuNatinality = stuNatinality;
+        this.stuReligion = stuReligion;
+        this.stuPicture = stuPicture;
+        this.stuPhysicallychallenged = stuPhysicallychallenged;
+        this.stuChallengetype = stuChallengetype;
+        this.stuFathername = stuFathername;
+        this.stuFathermobile = stuFathermobile;
+        this.stuFatheroccupation = stuFatheroccupation;
+        this.stuFatherqualification = stuFatherqualification;
+        this.stuFatheremail = stuFatheremail;
+        this.stuMothername = stuMothername;
+        this.stuMothermobile = stuMothermobile;
+        this.stuMotheroccupation = stuMotheroccupation;
+        this.stuMotherqualification = stuMotherqualification;
+        this.stuMotheremail = stuMotheremail;
+        this.stuFamilyincome = stuFamilyincome;
+        this.stuMarriagedate = stuMarriagedate;
+        this.stuGuardianname = stuGuardianname;
+        this.stuGurdianoccupation = stuGurdianoccupation;
+        this.stuRelatiowithstudent = stuRelatiowithstudent;
+        this.stuGuardianmobile = stuGuardianmobile;
+        this.stuGuardianemail = stuGuardianemail;
+        this.stuSchoolname = stuSchoolname;
+        this.stuSchooladdress = stuSchooladdress;
+        this.stuSchoolphone = stuSchoolphone;
+        this.stuSchoolwebsite = stuSchoolwebsite;
+        this.stuSchoolemail = stuSchoolemail;
+        this.stuAdmissionyear = stuAdmissionyear;
+        this.stuIdentificationmark = stuIdentificationmark;
+        this.stuRationcard = stuRationcard;
+        this.stuBirthcertificate = stuBirthcertificate;
+        this.stuDisease = stuDisease;
+        this.stuCurrentstatus = stuCurrentstatus;
+        this.stuCreatedby = stuCreatedby;
+        this.stuCreatedon = stuCreatedon;
+        this.stuEditedby = stuEditedby;
+        this.stuEditedon = stuEditedon;
+        this.stuIsactive = stuIsactive;
+    }
+    public Studentmaster(String stuAdmissionno, String stuStudentid, String stuRegistrationid, Date stuAdmissiondate, int stuAdmissionstatus, String stuStudentname, Date stuDob, String stuGender, int stuAge, String stuBloodgroup, BigDecimal stuPreviousmarks, String stuAddressline, String stuState, String stuCity, int stuPincode, int stuNoofsiblings, String stuNatinality, String stuReligion, int stuPicture, String stuPhysicallychallenged, String stuChallengetype, String stuFathername, String stuFathermobile, String stuFatheroccupation, String stuFatherqualification, String stuFatheremail, String stuMothername, String stuMothermobile, String stuMotheroccupation, String stuMotherqualification, String stuMotheremail, BigDecimal stuFamilyincome, Date stuMarriagedate, String stuGuardianname, String stuGurdianoccupation, String stuRelatiowithstudent, String stuGuardianmobile, String stuGuardianemail, String stuSchoolname, String stuSchooladdress, String stuSchoolphone, String stuSchoolwebsite, String stuSchoolemail, int stuAdmissionyear, String stuIdentificationmark, String stuRationcard, String stuBirthcertificate, String stuDisease, int stuCurrentstatus, Integer stuFlag2, String stuFlag3, String stuFlag4, String stuFlag5, int stuCreatedby, Date stuCreatedon, int stuEditedby, Date stuEditedon, String stuIsactive) {
        this.stuAdmissionno = stuAdmissionno;
        this.stuStudentid = stuStudentid;
        this.stuRegistrationid = stuRegistrationid;
@@ -340,7 +397,7 @@ public class Studentmaster  implements java.io.Serializable {
     }
 
     
-    @Column(name="STU_PICTURE", nullable=false)
+    @Column(name="STU_PICTURE", nullable=true)
     public int getStuPicture() {
         return this.stuPicture;
     }
@@ -650,17 +707,17 @@ public class Studentmaster  implements java.io.Serializable {
     }
 
     
-    @Column(name="STU_FLAG_2", nullable=false)
-    public int getStuFlag2() {
+    @Column(name="STU_FLAG_2")
+    public Integer getStuFlag2() {
         return this.stuFlag2;
     }
     
-    public void setStuFlag2(int stuFlag2) {
+    public void setStuFlag2(Integer stuFlag2) {
         this.stuFlag2 = stuFlag2;
     }
 
     
-    @Column(name="STU_FLAG_3", nullable=false, length=50)
+    @Column(name="STU_FLAG_3", length=50)
     public String getStuFlag3() {
         return this.stuFlag3;
     }
@@ -670,7 +727,7 @@ public class Studentmaster  implements java.io.Serializable {
     }
 
     
-    @Column(name="STU_FLAG_4", nullable=false, length=50)
+    @Column(name="STU_FLAG_4", length=50)
     public String getStuFlag4() {
         return this.stuFlag4;
     }
@@ -680,7 +737,7 @@ public class Studentmaster  implements java.io.Serializable {
     }
 
     
-    @Column(name="STU_FLAG_5", nullable=false, length=50)
+    @Column(name="STU_FLAG_5", length=50)
     public String getStuFlag5() {
         return this.stuFlag5;
     }

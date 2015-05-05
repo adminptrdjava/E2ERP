@@ -1,16 +1,12 @@
 package com.model.pojo;
-// Generated 13 Apr, 2015 11:03:03 PM by Hibernate Tools 4.3.1
+// Generated 15 Apr, 2015 12:30:14 AM by Hibernate Tools 4.3.1
 
 
-import java.util.HashSet;
-import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import static javax.persistence.GenerationType.IDENTITY;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
@@ -26,17 +22,14 @@ public class ClassMaster  implements java.io.Serializable {
      private Integer classId;
      private String className;
      private String classIsactive;
-     
 
     public ClassMaster() {
     }
 
-	
     public ClassMaster(String className, String classIsactive) {
-        this.className = className;
-        this.classIsactive = classIsactive;
+       this.className = className;
+       this.classIsactive = classIsactive;
     }
-    
    
      @Id @GeneratedValue(strategy=IDENTITY)
 
@@ -69,8 +62,6 @@ public class ClassMaster  implements java.io.Serializable {
     public void setClassIsactive(String classIsactive) {
         this.classIsactive = classIsactive;
     }
-
-
 
 
 

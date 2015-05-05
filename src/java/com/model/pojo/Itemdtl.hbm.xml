@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 13 Apr, 2015 11:03:06 PM by Hibernate Tools 4.3.1 -->
+<!-- Generated 15 Apr, 2015 12:30:18 AM by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
     <class name="com.model.pojo.Itemdtl" table="itemdtl" catalog="e2rp" optimistic-lock="version">
         <composite-id name="id" class="com.model.pojo.ItemdtlId">
@@ -12,9 +12,6 @@
                 <column name="ITEM_ID" />
             </key-property>
         </composite-id>
-        <many-to-one name="itemmaster" class="com.model.pojo.Itemmaster" update="false" insert="false" fetch="select">
-            <column name="ITEM_ID" not-null="true" />
-        </many-to-one>
         <property name="itemPurrate" type="big_decimal">
             <column name="ITEM_PURRATE" precision="18" />
         </property>

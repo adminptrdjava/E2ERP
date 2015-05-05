@@ -1,17 +1,13 @@
 package com.model.pojo;
-// Generated 13 Apr, 2015 11:03:03 PM by Hibernate Tools 4.3.1
+// Generated 15 Apr, 2015 12:30:14 AM by Hibernate Tools 4.3.1
 
 
 import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import static javax.persistence.GenerationType.IDENTITY;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -32,26 +28,16 @@ public class RoutineMaster  implements java.io.Serializable {
      private int createdBy;
      private Date createdOn;
      private String rmIsactive;
-     private Set<RoutineDetails> routineDetailses = new HashSet<RoutineDetails>(0);
 
     public RoutineMaster() {
     }
 
-	
     public RoutineMaster(int classId, String section, int createdBy, Date createdOn, String rmIsactive) {
-        this.classId = classId;
-        this.section = section;
-        this.createdBy = createdBy;
-        this.createdOn = createdOn;
-        this.rmIsactive = rmIsactive;
-    }
-    public RoutineMaster(int classId, String section, int createdBy, Date createdOn, String rmIsactive, Set<RoutineDetails> routineDetailses) {
        this.classId = classId;
        this.section = section;
        this.createdBy = createdBy;
        this.createdOn = createdOn;
        this.rmIsactive = rmIsactive;
-       this.routineDetailses = routineDetailses;
     }
    
      @Id @GeneratedValue(strategy=IDENTITY)
@@ -114,15 +100,6 @@ public class RoutineMaster  implements java.io.Serializable {
     
     public void setRmIsactive(String rmIsactive) {
         this.rmIsactive = rmIsactive;
-    }
-
-@OneToMany(fetch=FetchType.LAZY, mappedBy="routineMaster")
-    public Set<RoutineDetails> getRoutineDetailses() {
-        return this.routineDetailses;
-    }
-    
-    public void setRoutineDetailses(Set<RoutineDetails> routineDetailses) {
-        this.routineDetailses = routineDetailses;
     }
 
 

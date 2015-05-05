@@ -1,5 +1,5 @@
 package com.model.pojo;
-// Generated 13 Apr, 2015 11:03:03 PM by Hibernate Tools 4.3.1
+// Generated 15 Apr, 2015 12:30:14 AM by Hibernate Tools 4.3.1
 
 
 import java.math.BigDecimal;
@@ -9,9 +9,6 @@ import javax.persistence.AttributeOverrides;
 import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -27,7 +24,6 @@ public class Itemdtl  implements java.io.Serializable {
 
 
      private ItemdtlId id;
-     private Itemmaster itemmaster;
      private BigDecimal itemPurrate;
      private String itemPurrateuom;
      private BigDecimal itemSalerate;
@@ -39,16 +35,14 @@ public class Itemdtl  implements java.io.Serializable {
     }
 
 	
-    public Itemdtl(ItemdtlId id, Itemmaster itemmaster, String itemPurrateuom, String itemSalerateuom, Date itemFromdt) {
+    public Itemdtl(ItemdtlId id, String itemPurrateuom, String itemSalerateuom, Date itemFromdt) {
         this.id = id;
-        this.itemmaster = itemmaster;
         this.itemPurrateuom = itemPurrateuom;
         this.itemSalerateuom = itemSalerateuom;
         this.itemFromdt = itemFromdt;
     }
-    public Itemdtl(ItemdtlId id, Itemmaster itemmaster, BigDecimal itemPurrate, String itemPurrateuom, BigDecimal itemSalerate, String itemSalerateuom, Date itemFromdt, Date itemTodt) {
+    public Itemdtl(ItemdtlId id, BigDecimal itemPurrate, String itemPurrateuom, BigDecimal itemSalerate, String itemSalerateuom, Date itemFromdt, Date itemTodt) {
        this.id = id;
-       this.itemmaster = itemmaster;
        this.itemPurrate = itemPurrate;
        this.itemPurrateuom = itemPurrateuom;
        this.itemSalerate = itemSalerate;
@@ -69,16 +63,6 @@ public class Itemdtl  implements java.io.Serializable {
     
     public void setId(ItemdtlId id) {
         this.id = id;
-    }
-
-@ManyToOne(fetch=FetchType.LAZY)
-    @JoinColumn(name="ITEM_ID", nullable=false, insertable=false, updatable=false)
-    public Itemmaster getItemmaster() {
-        return this.itemmaster;
-    }
-    
-    public void setItemmaster(Itemmaster itemmaster) {
-        this.itemmaster = itemmaster;
     }
 
     

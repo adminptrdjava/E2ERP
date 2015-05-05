@@ -1,5 +1,6 @@
 <%@taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles" %> 
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@taglib uri="http://www.springframework.org/tags/form"  prefix="f"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -418,11 +419,12 @@
 
                         <div class="panel-footer">
                             <div class="input-group">
-                                <input id="btn-input" type="text" class="form-control input-sm" placeholder="Type your message here..." />
+                                <f:form action="getTcode.htm" modelAttribute="Tc">
+                                    <input name="Tc" id="btn-input" type="text" class="form-control input-sm" placeholder="Type Tcode Here" />
                                 <span class="input-group-btn">
-                                    <button class="btn btn-warning btn-sm" id="btn-chat">
+                                    <input type="submit" class="btn btn-warning btn-sm" id="btn-chat" >
                                         Send
-                                    </button>
+                                </f:form>
                                 </span>
                             </div>
                         </div>

@@ -1,17 +1,13 @@
 package com.model.pojo;
-// Generated 13 Apr, 2015 11:03:03 PM by Hibernate Tools 4.3.1
+// Generated 15 Apr, 2015 12:30:14 AM by Hibernate Tools 4.3.1
 
 
 import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import static javax.persistence.GenerationType.IDENTITY;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -35,7 +31,6 @@ public class Receiptmaster  implements java.io.Serializable {
      private String recType;
      private Integer recChqno;
      private String recChqdate;
-     private Set<Receiptdetails> receiptdetailses = new HashSet<Receiptdetails>(0);
 
     public Receiptmaster() {
     }
@@ -49,7 +44,7 @@ public class Receiptmaster  implements java.io.Serializable {
         this.recNarration = recNarration;
         this.recType = recType;
     }
-    public Receiptmaster(int recCodeid, String recCode, int recTocid, Date recVoudate, String recNarration, String recType, Integer recChqno, String recChqdate, Set<Receiptdetails> receiptdetailses) {
+    public Receiptmaster(int recCodeid, String recCode, int recTocid, Date recVoudate, String recNarration, String recType, Integer recChqno, String recChqdate) {
        this.recCodeid = recCodeid;
        this.recCode = recCode;
        this.recTocid = recTocid;
@@ -58,7 +53,6 @@ public class Receiptmaster  implements java.io.Serializable {
        this.recType = recType;
        this.recChqno = recChqno;
        this.recChqdate = recChqdate;
-       this.receiptdetailses = receiptdetailses;
     }
    
      @Id @GeneratedValue(strategy=IDENTITY)
@@ -151,15 +145,6 @@ public class Receiptmaster  implements java.io.Serializable {
     
     public void setRecChqdate(String recChqdate) {
         this.recChqdate = recChqdate;
-    }
-
-@OneToMany(fetch=FetchType.LAZY, mappedBy="receiptmaster")
-    public Set<Receiptdetails> getReceiptdetailses() {
-        return this.receiptdetailses;
-    }
-    
-    public void setReceiptdetailses(Set<Receiptdetails> receiptdetailses) {
-        this.receiptdetailses = receiptdetailses;
     }
 
 

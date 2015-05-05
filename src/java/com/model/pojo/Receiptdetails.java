@@ -1,5 +1,5 @@
 package com.model.pojo;
-// Generated 13 Apr, 2015 11:03:03 PM by Hibernate Tools 4.3.1
+// Generated 15 Apr, 2015 12:30:14 AM by Hibernate Tools 4.3.1
 
 
 import java.math.BigDecimal;
@@ -8,9 +8,6 @@ import javax.persistence.AttributeOverrides;
 import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 /**
@@ -24,7 +21,6 @@ public class Receiptdetails  implements java.io.Serializable {
 
 
      private ReceiptdetailsId id;
-     private Receiptmaster receiptmaster;
      private String recByorto;
      private String recNature;
      private String recParticulars;
@@ -36,17 +32,15 @@ public class Receiptdetails  implements java.io.Serializable {
     }
 
 	
-    public Receiptdetails(ReceiptdetailsId id, Receiptmaster receiptmaster, String recByorto, String recNature, String recParticulars, int recAccId) {
+    public Receiptdetails(ReceiptdetailsId id, String recByorto, String recNature, String recParticulars, int recAccId) {
         this.id = id;
-        this.receiptmaster = receiptmaster;
         this.recByorto = recByorto;
         this.recNature = recNature;
         this.recParticulars = recParticulars;
         this.recAccId = recAccId;
     }
-    public Receiptdetails(ReceiptdetailsId id, Receiptmaster receiptmaster, String recByorto, String recNature, String recParticulars, int recAccId, BigDecimal recDramount, BigDecimal recCramount) {
+    public Receiptdetails(ReceiptdetailsId id, String recByorto, String recNature, String recParticulars, int recAccId, BigDecimal recDramount, BigDecimal recCramount) {
        this.id = id;
-       this.receiptmaster = receiptmaster;
        this.recByorto = recByorto;
        this.recNature = recNature;
        this.recParticulars = recParticulars;
@@ -67,16 +61,6 @@ public class Receiptdetails  implements java.io.Serializable {
     
     public void setId(ReceiptdetailsId id) {
         this.id = id;
-    }
-
-@ManyToOne(fetch=FetchType.LAZY)
-    @JoinColumn(name="REC_ID", nullable=false, insertable=false, updatable=false)
-    public Receiptmaster getReceiptmaster() {
-        return this.receiptmaster;
-    }
-    
-    public void setReceiptmaster(Receiptmaster receiptmaster) {
-        this.receiptmaster = receiptmaster;
     }
 
     

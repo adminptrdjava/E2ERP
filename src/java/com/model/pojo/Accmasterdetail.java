@@ -1,5 +1,5 @@
 package com.model.pojo;
-// Generated 13 Apr, 2015 11:03:03 PM by Hibernate Tools 4.3.1
+// Generated 15 Apr, 2015 12:30:14 AM by Hibernate Tools 4.3.1
 
 
 import java.math.BigDecimal;
@@ -8,9 +8,6 @@ import javax.persistence.AttributeOverrides;
 import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 /**
@@ -24,7 +21,6 @@ public class Accmasterdetail  implements java.io.Serializable {
 
 
      private AccmasterdetailId id;
-     private Account account;
      private String accName;
      private String accAddress;
      private String accPhoneno;
@@ -36,13 +32,11 @@ public class Accmasterdetail  implements java.io.Serializable {
     }
 
 	
-    public Accmasterdetail(AccmasterdetailId id, Account account) {
+    public Accmasterdetail(AccmasterdetailId id) {
         this.id = id;
-        this.account = account;
     }
-    public Accmasterdetail(AccmasterdetailId id, Account account, String accName, String accAddress, String accPhoneno, String accEmail, BigDecimal accOpbalance, String accRemarks) {
+    public Accmasterdetail(AccmasterdetailId id, String accName, String accAddress, String accPhoneno, String accEmail, BigDecimal accOpbalance, String accRemarks) {
        this.id = id;
-       this.account = account;
        this.accName = accName;
        this.accAddress = accAddress;
        this.accPhoneno = accPhoneno;
@@ -63,16 +57,6 @@ public class Accmasterdetail  implements java.io.Serializable {
     
     public void setId(AccmasterdetailId id) {
         this.id = id;
-    }
-
-@ManyToOne(fetch=FetchType.LAZY)
-    @JoinColumn(name="ACC_ID", nullable=false, insertable=false, updatable=false)
-    public Account getAccount() {
-        return this.account;
-    }
-    
-    public void setAccount(Account account) {
-        this.account = account;
     }
 
     

@@ -4,6 +4,7 @@
 "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 
 <tiles-definitions>
+    <!-- This is Base lay out def all tiles def extend this def -->
     <definition name="base.definition" template="/WEB-INF/jsp/layout.jsp">
         <put-attribute name="title" value=""/>
         
@@ -18,17 +19,31 @@
        
     </definition>
    
-    
+    <!-- Class Module -->
      <definition name="getAllcls" extends="base.definition">
-        <put-attribute name="title" value="index"/>
+        <put-attribute name="title" value=""/>
         <put-attribute name="body" value="/WEB-INF/jsp/getAllcls.jsp"/>
     </definition>
  
+ 
+  <!-- End OF CLASS MODULE -->
+  
+  <!-- STUDENT MASTER MODULE -->
+ 
+  <definition name="getAllStu" extends="base.definition">
+        <put-attribute name="title" value=""/>
+        <put-attribute name="body" value="/WEB-INF/jsp/getAllStu.jsp"/>
+    </definition>
+  
+  <!-- END OF STU MASTER -->
+  
+  
+  <!-- BASIC INDEX DEF -->
   <definition name="index" extends="base.definition">
         <put-attribute name="title" value="index"/>
         <put-attribute name="body" value="/WEB-INF/jsp/index.jsp"/>
     </definition>
- 
+ <!-- END OF INDEX-->
  
     <definition name="index2" extends="base.definition">
         <put-attribute name="title" value="index"/>

@@ -13,3 +13,5 @@
           <div class="navbar-brand">
               <img src="<c:url value="/resources/assets/img/hb1.png"/>" alt="">
           </div>
+          
+              <p style="color: red">${TCE}</p>
